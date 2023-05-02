@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="radious_14">14dp</dimen>
+    <dimen name="text_normal_12sp">12sp</dimen>
+    <dimen name="text_heading_16sp">16sp</dimen>
+    <dimen name="text_heading_ultra_18sp">18sp</dimen>
+    <dimen name="text_heading_super_ultra_24sp">24sp</dimen>
+
+</resources>

@@ -1,0 +1,11 @@
+<resources>
+    <style name="popup_window_animation">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+
+    <style name="CustomTheme" parent="BottomDialogTheme">
+        <item name="bottom_sheet_extra_padding">4dp</item>
+        <item name="should_draw_under_status_bar">true</item>
+    </style>
+</resources>
