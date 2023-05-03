@@ -21,6 +21,7 @@ import android.widget.PopupWindow;
 import com.shamsaha.R;
 import com.shamsaha.databinding.ActivityMainBinding;
 import com.shamsaha.victim.fragment.ChatFragment;
+import com.shamsaha.victim.fragment.ContactUsFragment;
 import com.shamsaha.victim.fragment.EventMediaFragment;
 import com.shamsaha.victim.fragment.HomeFragment;
 import com.shamsaha.victim.fragment.ResourcesFragment;
@@ -86,7 +87,9 @@ public class DashboardVictimActivity extends AppCompatActivity {
         binding.contactUsMenuLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                ContactUsFragment contactUsFragment = new ContactUsFragment();
+                replace_fragment(contactUsFragment);
+                binding.menuLayout.setVisibility(View.GONE);
             }
         });
 

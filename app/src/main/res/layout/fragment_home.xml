@@ -211,9 +211,9 @@
                     android:textSize="@dimen/text_heading_ultra_18sp"
                     android:fontFamily="@font/avenir_heavy"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
+
                     app:layout_constraintHorizontal_bias="0.046"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/sl78934273"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.13" />
 
@@ -232,11 +232,189 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintBottom_toBottomOf="@+id/textView14"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/sl78934273"
                     app:layout_constraintHorizontal_bias="0.903"
-                    app:layout_constraintStart_toStartOf="parent"
+
                     app:layout_constraintTop_toTopOf="@+id/textView14"
                     app:srcCompat="@drawable/arrow_right1" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/sl78934273"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintWidth_percent="0.9"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView5"
+
+                    >
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintWidth_percent="0.33"
+
+                        >
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/women_em_number"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+
+                            android:text="1000+"
+                            android:textSize="@dimen/text_heading_super_ultra_24sp"
+                            android:textColor="@color/white"
+                            app:layout_constraintWidth_percent="0.99"
+                            app:layout_constraintHeight_percent="0.4"
+                            android:gravity="center_vertical"
+
+                            ></androidx.appcompat.widget.AppCompatTextView>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/women_em_number"
+                            app:layout_constraintEnd_toEndOf="parent"
+
+                            android:text="@string/women_em"
+                            android:textSize="@dimen/text_normal_12sp"
+
+                            android:textColor="@color/white"
+                            app:layout_constraintWidth_percent="0.99"
+                            app:layout_constraintHeight_percent="0.5"
+                            android:gravity="center_vertical"
+
+                            ></androidx.appcompat.widget.AppCompatTextView>
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:background="@drawable/custom_line_home"
+                            ></View>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintWidth_percent="0.33"
+
+                        >
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/women_em_number2"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+
+                            android:text="33%"
+                            android:textSize="@dimen/text_heading_super_ultra_24sp"
+                            android:textColor="@color/white"
+                            app:layout_constraintWidth_percent="0.99"
+                            app:layout_constraintHeight_percent="0.4"
+                            android:gravity="center_vertical"
+
+                            ></androidx.appcompat.widget.AppCompatTextView>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/women_em_number2"
+                            app:layout_constraintEnd_toEndOf="parent"
+
+                            android:text="@string/of_women"
+                            android:textSize="@dimen/text_normal_12sp"
+
+                            android:textColor="@color/white"
+                            app:layout_constraintWidth_percent="0.99"
+                            app:layout_constraintHeight_percent="0.5"
+                            android:gravity="center_vertical"
+
+                            ></androidx.appcompat.widget.AppCompatTextView>
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:background="@drawable/custom_line_home"
+                            ></View>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintWidth_percent="0.33"
+
+                        >
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/women_em_number3"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+
+                            android:text="$12"
+                            android:textSize="@dimen/text_heading_super_ultra_24sp"
+                            android:textColor="@color/white"
+                            app:layout_constraintWidth_percent="0.99"
+                            app:layout_constraintHeight_percent="0.4"
+                            android:gravity="center_vertical"
+
+                            ></androidx.appcompat.widget.AppCompatTextView>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/women_em_number3"
+                            app:layout_constraintEnd_toEndOf="parent"
+
+                            android:text="@string/trillion_lost"
+                            android:textSize="@dimen/text_normal_12sp"
+
+                            android:textColor="@color/white"
+                            app:layout_constraintWidth_percent="0.99"
+                            app:layout_constraintHeight_percent="0.5"
+                            android:gravity="center_vertical"
+
+                            ></androidx.appcompat.widget.AppCompatTextView>
+
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
