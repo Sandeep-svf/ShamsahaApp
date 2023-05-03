@@ -38,11 +38,8 @@ public class EventMediaFragment extends Fragment {
     }
     private void setupTabtitle() {
 
-
         binding.toolbar.getTabAt(0).setText(getResources().getString(R.string.photo));
-
         binding.toolbar.getTabAt(1).setText(getResources().getString(R.string.articles));
-
 
     }
     public static void setupViewPager(ViewPager viewPager, ViewPagerAdapter adapter)
@@ -50,7 +47,6 @@ public class EventMediaFragment extends Fragment {
         {
             adapter.addFragment(new PhotosFragment());
             adapter.addFragment(new ArticlesFragment());
-
         }
 
         viewPager.setAdapter(adapter);
@@ -58,8 +54,6 @@ public class EventMediaFragment extends Fragment {
     static class ViewPagerAdapter extends FragmentPagerAdapter
     {
         private final List<Fragment> mFragmentList = new ArrayList<>();
-
-
         public ViewPagerAdapter(FragmentManager manager) {
             super(manager);
         }
@@ -76,8 +70,6 @@ public class EventMediaFragment extends Fragment {
 
         public void addFragment(Fragment fragment) {
             mFragmentList.add(fragment);
-
-
         }
 
 

@@ -20,7 +20,7 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TableLayout
+    <com.google.android.material.tabs.TabLayout
         android:id="@+id/toolbar_resources"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout9"
         android:layout_width="match_parent"

@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.TableLayout;
 import android.widget.Toolbar;
 
+import com.google.android.material.tabs.TabLayout;
 import com.shamsaha.R;
 
 import java.util.ArrayList;
@@ -22,7 +23,7 @@ import java.util.List;
 public class ResourcesFragment extends Fragment {
 
     ViewPager viewPager;
-    Toolbar toolbar;
+    TabLayout toolbar;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -42,15 +43,15 @@ public class ResourcesFragment extends Fragment {
 
 
     private void setupTabtitle() {
-        toolbar.getTabAt(0).setText(getResources().getString(R.string.photo));
-        toolbar.getTabAt(1).setText(getResources().getString(R.string.articles));
+        toolbar.getTabAt(0).setText(getResources().getString(R.string.per_country));
+        toolbar.getTabAt(1).setText(getResources().getString(R.string.servival_suppoer_tool));
     }
 
     public static void setupViewPager(ViewPager viewPager, EventMediaFragment.ViewPagerAdapter adapter)
     {
         {
-            adapter.addFragment(new PhotosFragment());
-            adapter.addFragment(new ArticlesFragment());
+            adapter.addFragment(new PerCountryFragment());
+            adapter.addFragment(new SurvivorSupportToolsFragment());
 
         }
 

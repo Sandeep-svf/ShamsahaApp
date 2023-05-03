@@ -21,12 +21,15 @@ import android.widget.PopupWindow;
 import com.shamsaha.R;
 import com.shamsaha.databinding.ActivityMainBinding;
 import com.shamsaha.victim.fragment.ChatFragment;
+import com.shamsaha.victim.fragment.EventMediaFragment;
 import com.shamsaha.victim.fragment.HomeFragment;
+import com.shamsaha.victim.fragment.ResourcesFragment;
 
 public class DashboardVictimActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
-    Animation animFadeIn, animSlideIn, animSlideInTop;
+    Animation animFadeIn, animSlideIn, animSlideInTop,animMoveUp,animMoveDown;
+    Boolean menuFlag = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +45,13 @@ public class DashboardVictimActivity extends AppCompatActivity {
             }
         });
 
+        binding.resourcesVictimLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ResourcesFragment resourcesFragment = new ResourcesFragment();
+                replace_fragment(resourcesFragment);
+            }
+        });
         binding.chatVictimLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,11 +59,65 @@ public class DashboardVictimActivity extends AppCompatActivity {
                 replace_fragment(chatFragment);
             }
         });
+        binding.aboutShamsahaMenuLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        binding.getInvolvedMenuLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        binding.eventMediaMenuLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EventMediaFragment eventMediaFragment = new EventMediaFragment();
+                replace_fragment(eventMediaFragment);
+                binding.menuLayout.setVisibility(View.GONE);
+            }
+        });
+
+
+        binding.contactUsMenuLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        binding.lockAppMenuLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        binding.termConditionMenuLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
 
         binding.menuVictimLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                manualcodePopup();
+              //  manualcodePopup();
+                if(menuFlag.booleanValue()==false){
+                    binding.menuLayout.setVisibility(View.VISIBLE);
+                    binding.menuLayout.setAnimation(animMoveUp);
+                    menuFlag = true;
+                }else{
+                    binding.menuLayout.setVisibility(View.GONE);
+                    binding.menuLayout.setAnimation(animMoveDown);
+                    menuFlag = false;
+                }
+
             }
         });
 
@@ -65,6 +129,8 @@ public class DashboardVictimActivity extends AppCompatActivity {
         animSlideIn = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_up);
         animSlideInTop = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_in_top_custom);
         animFadeIn = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
+        animMoveUp = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_up);
+        animMoveDown = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_down);
 
 
     }

@@ -19,4 +19,12 @@
     <string name="contact">Contact</string>
     <string name="photo">Photos</string>
     <string name="articles">Articles</string>
+    <string name="about_shamsaha">About Shamsaha</string>
+    <string name="get_involved">Get Involved</string>
+    <string name="event_media"><![CDATA[Event & Media]]></string>
+    <string name="contact_us">Contact Us</string>
+    <string name="lock_app">Lock App</string>
+    <string name="terms_condition"><![CDATA[Terms & Conditions]]></string>
+    <string name="per_country">Per Country</string>
+    <string name="servival_suppoer_tool">Survivor support tools</string>
 </resources>

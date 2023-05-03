@@ -24,6 +24,9 @@
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/circleImageView"
                 android:layout_width="0dp"
+                android:elevation="2dp"
+                app:civ_border_width="1dp"
+                app:civ_border_color="@color/dark_white"
                 android:layout_height="0dp"
                 android:src="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -39,8 +42,17 @@
 
                 app:layout_constraintWidth_percent="0.15"></de.hdodenhof.circleimageview.CircleImageView>
 
+            <View
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:elevation="1dp"
+                android:background="@color/dark_white"
+                ></View>
+
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/constraintLayout"
+                android:elevation="2dp"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 app:layout_constraintHeight_percent="0.065"
@@ -122,6 +134,7 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/resources_victim_layout"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1">
@@ -176,6 +189,110 @@
                 app:layout_constraintStart_toStartOf="parent"
 
                 app:layout_constraintTop_toTopOf="parent">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/menu_layout"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@drawable/custom_radius_upper_corner"
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+
+
+                >
+
+
+                <TextView
+                    android:id="@+id/term_condition_menu_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                     android:text="@string/terms_condition"
+                    android:textSize="@dimen/text_heading_ultra_18sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/avenir_heavy"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lock_app_menu_layout" />
+
+                <TextView
+                    android:id="@+id/lock_app_menu_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                     android:text="@string/lock_app"
+                    android:textSize="@dimen/text_heading_ultra_18sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/avenir_heavy"
+                    app:layout_constraintBottom_toTopOf="@+id/term_condition_menu_layout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/contact_us_menu_layout" />
+
+                <TextView
+                    android:id="@+id/contact_us_menu_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                     android:text="@string/contact_us"
+                    android:textSize="@dimen/text_heading_ultra_18sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/avenir_heavy"
+                    app:layout_constraintBottom_toTopOf="@+id/lock_app_menu_layout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/event_media_menu_layout" />
+
+                <TextView
+                    android:id="@+id/event_media_menu_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                     android:text="@string/event_media"
+                    android:textSize="@dimen/text_heading_ultra_18sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/avenir_heavy"
+                    app:layout_constraintBottom_toTopOf="@+id/contact_us_menu_layout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/get_involved_menu_layout" />
+
+                <TextView
+                    android:id="@+id/get_involved_menu_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                     android:text="@string/get_involved"
+                    android:textSize="@dimen/text_heading_ultra_18sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/avenir_heavy"
+                    app:layout_constraintBottom_toTopOf="@+id/event_media_menu_layout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/about_shamsaha_menu_layout" />
+
+                <TextView
+                    android:id="@+id/about_shamsaha_menu_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/about_shamsaha"
+                    android:textSize="@dimen/text_heading_ultra_18sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/avenir_heavy"
+                    app:layout_constraintBottom_toTopOf="@+id/get_involved_menu_layout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    
+                    app:layout_constraintHorizontal_bias="0.1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
