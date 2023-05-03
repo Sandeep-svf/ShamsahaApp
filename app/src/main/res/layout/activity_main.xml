@@ -184,7 +184,7 @@
                 android:id="@+id/container"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                app:layout_constraintBottom_toTopOf="@+id/circleImageView"
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
 

@@ -29,12 +29,13 @@
 
                 android:layout_height="0dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHeight_percent="0.29"
+                app:layout_constraintHeight_percent="0.19"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toBottomOf="@+id/cardView">
 
 
                 <androidx.appcompat.widget.AppCompatImageView
+                    android:visibility="gone"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -51,7 +52,52 @@
 
                     ></androidx.appcompat.widget.AppCompatImageView>
 
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="0dp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/avenir_heavy"
+                    android:textSize="@dimen/text_heading_ultra_18sp"
+                    app:layout_constraintWidth_percent="0.9"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/sl342342"
+                    android:text="@string/raw_data_homepage"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:gravity="center"
+                    android:id="@+id/sl342342"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintWidth_percent="0.9"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="@string/raw_data_homepage"
+                    android:textSize="@dimen/text_normal_12sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11"
+
+                    ></androidx.appcompat.widget.AppCompatTextView>
+
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/sl456"
+                android:layout_width="0dp"
+                android:src="@drawable/logo"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.0225"
+                app:layout_constraintWidth_percent="0.5"
+                app:layout_constraintHeight_percent="0.075"
+                ></androidx.appcompat.widget.AppCompatImageView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
@@ -62,12 +108,12 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHeight_percent="0.29"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" >
+                app:layout_constraintTop_toBottomOf="@+id/sl456" >
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/ic_launcher_background"
+                    android:src="@drawable/home_pic"
                     android:scaleType="centerCrop"
                     ></androidx.appcompat.widget.AppCompatImageView>
 
@@ -82,7 +128,66 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHeight_percent="0.195"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardView" />
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" >
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/how_we_have_help"
+                    android:textColor="@color/purple_them"
+                    android:textSize="@dimen/text_heading_ultra_18sp"
+                    android:fontFamily="@font/avenir_heavy"
+                    app:layout_constraintVertical_bias="0.05"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="0dp"
+                    app:layout_constraintWidth_percent="0.9"
+                    android:layout_height="0dp"
+                    app:layout_constraintHeight_percent="0.4"
+                    android:text="@string/how_we_have_help_2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    app:layout_constraintHeight_percent="0.25"
+                    app:layout_constraintWidth_percent="0.3"
+                    android:background="@drawable/custom_bg_learn_more"
+                    app:layout_constraintVertical_bias="0.95"
+
+                    >
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/learn_more"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:gravity="center"
+                        android:fontFamily="@font/avenir_heavy"
+                        android:textColor="@color/purple_them"
+                        ></androidx.appcompat.widget.AppCompatTextView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -91,12 +196,47 @@
                 android:background="@drawable/custom_layout_yello_dashboard"
 
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintHeight_percent="0.195"
-                app:layout_constraintTop_toBottomOf="@+id/cardView2" >
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView2">
 
 
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/did_you_know"
+                    android:textColor="@color/purple_them"
+                    android:textSize="@dimen/text_heading_ultra_18sp"
+                    android:fontFamily="@font/avenir_heavy"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.046"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.13" />
 
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView14"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView5"
+                    app:layout_constraintTop_toTopOf="@+id/textView14"
+                    app:srcCompat="@drawable/arrow_left1" />
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView14"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.903"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView14"
+                    app:srcCompat="@drawable/arrow_right1" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
