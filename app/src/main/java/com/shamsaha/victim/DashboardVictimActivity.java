@@ -5,6 +5,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -20,10 +21,12 @@ import android.widget.PopupWindow;
 
 import com.shamsaha.R;
 import com.shamsaha.databinding.ActivityMainBinding;
+import com.shamsaha.victim.fragment.AboutFragment;
 import com.shamsaha.victim.fragment.ChatFragment;
 import com.shamsaha.victim.fragment.ContactUsFragment;
 import com.shamsaha.victim.fragment.EventMediaFragment;
 import com.shamsaha.victim.fragment.HomeFragment;
+import com.shamsaha.victim.fragment.LockAppFragment;
 import com.shamsaha.victim.fragment.ResourcesFragment;
 
 public class DashboardVictimActivity extends AppCompatActivity {
@@ -37,6 +40,8 @@ public class DashboardVictimActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main);
         set_animation();
+
+
 
         binding.homeVictimLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,12 +69,18 @@ public class DashboardVictimActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                AboutFragment aboutFragment = new AboutFragment();
+                replace_fragment(aboutFragment);
+                binding.menuLayout.setVisibility(View.GONE);
+                menuFlag = false;
             }
         });
 
         binding.getInvolvedMenuLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
 
             }
         });
@@ -80,6 +91,7 @@ public class DashboardVictimActivity extends AppCompatActivity {
                 EventMediaFragment eventMediaFragment = new EventMediaFragment();
                 replace_fragment(eventMediaFragment);
                 binding.menuLayout.setVisibility(View.GONE);
+                menuFlag = false;
             }
         });
 
@@ -90,13 +102,17 @@ public class DashboardVictimActivity extends AppCompatActivity {
                 ContactUsFragment contactUsFragment = new ContactUsFragment();
                 replace_fragment(contactUsFragment);
                 binding.menuLayout.setVisibility(View.GONE);
+                menuFlag = false;
             }
         });
 
         binding.lockAppMenuLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                LockAppFragment lockAppFragment = new LockAppFragment();
+                replace_fragment(lockAppFragment);
+                binding.menuLayout.setVisibility(View.GONE);
+                menuFlag = false;
             }
         });
 
@@ -139,9 +155,11 @@ public class DashboardVictimActivity extends AppCompatActivity {
     }
     private void replace_fragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
-        ((ConstraintLayout) findViewById(R.id.container)).removeAllViews();
-        androidx.fragment.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        //((ConstraintLayout) findViewById(R.id.container)).removeAllViews();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left, R.anim.enter_from_left, R.anim.exit_to_right);
         fragmentTransaction.add(R.id.container, fragment);
+        fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
 

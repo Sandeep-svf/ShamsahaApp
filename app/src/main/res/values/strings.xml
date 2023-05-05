@@ -35,4 +35,16 @@
     <string name="women_em">"Women empowered annually by Shamsaha."</string>
     <string name="of_women">of women will experience abuse in their lifetime.</string>
     <string name="trillion_lost">trillion lost annually due to abuse and descrimination.</string>
+    <string name="who_we_are">Who we are</string>
+    <string name="shamsaha_vision_is">Shamsaha\'s vision is</string>
+    <string name="to_empower">to empower women to thrive</string>
+    <string name="we_believe_with">We believe in acting with</string>
+    <string name="conviction_compossion">conviction + compassion</string>
+    <string name="advisory_board">Advisory board</string>
+    <string name="personal_details">Personal Details</string>
+    <string name="create_pin">Create Pin</string>
+    <string name="submit">Submit</string>
+    <string name="enter_four_digit">Enter 4 digit PIN number</string>
+    <string name="reenter_pin">Re-enter your PIN number</string>
+    <string name="resources">Resources</string>
 </resources>

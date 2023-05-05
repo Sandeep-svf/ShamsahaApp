@@ -31,12 +31,11 @@ public class ResourcesFragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_resources, container, false);
         intis(view);
+
         EventMediaFragment.ViewPagerAdapter adapter = new EventMediaFragment.ViewPagerAdapter(getChildFragmentManager());
         setupViewPager(viewPager,adapter);
         toolbar.setupWithViewPager(viewPager);
         setupTabtitle();
-
-
 
         return  view;
     }
@@ -60,8 +59,6 @@ public class ResourcesFragment extends Fragment {
     static class ViewPagerAdapter extends FragmentPagerAdapter
     {
         private final List<Fragment> mFragmentList = new ArrayList<>();
-
-
         public ViewPagerAdapter(FragmentManager manager) {
             super(manager);
         }
@@ -78,8 +75,6 @@ public class ResourcesFragment extends Fragment {
 
         public void addFragment(Fragment fragment) {
             mFragmentList.add(fragment);
-
-
         }
 
 

@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/pick_them"
+        tools:context=".victim.fragment.LockAppFragment">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/lock_app_bg"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout8"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.15"
+                app:layout_constraintStart_toStartOf="parent"
+
+
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/logo_contact_us"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+
+                    app:layout_constraintHeight_percent="0.3"
+                    app:layout_constraintWidth_percent="0.4"
+                    app:layout_constraintVertical_bias="0.25"
+                    android:src="@drawable/logo"
+                    android:scaleType="fitXY"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+
+                    app:layout_constraintHeight_percent="0.3"
+                    app:layout_constraintWidth_percent="0.1"
+                    app:layout_constraintVertical_bias="0.25"
+                    app:layout_constraintHorizontal_bias="0.075"
+                    android:src="@drawable/arrow_left1"
+                    android:scaleType="fitXY"
+
+                    app:layout_constraintBottom_toBottomOf="@+id/logo_contact_us"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/logo_contact_us"></androidx.appcompat.widget.AppCompatImageView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+
+                    app:layout_constraintHeight_percent="0.3"
+                    app:layout_constraintWidth_percent="0.4"
+                    app:layout_constraintVertical_bias="0.85"
+                    android:fontFamily="@font/avenir_heavy"
+                    android:text="@string/lock_app"
+                    android:textColor="@color/white"
+                    app:fontFamily="@font/avenir_heavy"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_heading_super_ultra_24sp"
+                    android:gravity="center"
+                    android:scaleType="fitXY"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.AppCompatTextView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout8"
+                app:layout_constraintHeight_percent="0.41"
+                >
+
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/avenir_heavy"
+                    android:text="@string/personal_details"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_heading_ultra_18sp"
+                    app:layout_constraintBottom_toTopOf="@+id/email_layout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.058"
+                    app:layout_constraintWidth_percent="0.9" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/email_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    app:layout_constraintBottom_toTopOf="@+id/create_pin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.1"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView15"
+                    app:layout_constraintWidth_percent="0.9">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/sl489594"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/email"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+
+
+                    <View
+                        android:id="@+id/sl934893"
+                        android:layout_width="2dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@color/dark_white"
+                        app:layout_constraintStart_toEndOf="@+id/sl489594"
+                        app:layout_constraintTop_toTopOf="parent"></View>
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:background="@null"
+                        android:fontFamily="@font/avenir_heavy"
+                        android:layout_marginStart="5dp"
+                        android:inputType="textEmailAddress"
+                        android:hint="@string/email"
+                        android:textColor="@color/white"
+                        app:layout_constraintStart_toEndOf="@+id/sl934893"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.875"
+
+
+                        ></androidx.appcompat.widget.AppCompatEditText>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"></View>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/create_pin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/avenir_heavy"
+                    android:text="@string/create_pin"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_heading_ultra_18sp"
+                    app:layout_constraintBottom_toTopOf="@+id/create_pin_layout1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/email_layout"
+                    app:layout_constraintWidth_percent="0.9" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/create_pin_layout1"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    app:layout_constraintBottom_toTopOf="@+id/create_pin_layout12"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.1"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/create_pin"
+                    app:layout_constraintWidth_percent="0.9">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/sl4895942"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        app:tint="@color/white"
+                        android:src="@drawable/three_dot_h"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+
+
+                    <View
+                        android:id="@+id/sl9348932"
+                        android:layout_width="2dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@color/dark_white"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toEndOf="@+id/sl4895942"
+                        app:layout_constraintTop_toTopOf="parent"></View>
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:fontFamily="@font/avenir_heavy"
+                        android:layout_marginStart="10dp"
+                        android:background="@null"
+                        android:hint="@string/enter_four_digit"
+                        android:inputType="numberPassword"
+                        android:textColor="@color/white"
+                        app:layout_constraintStart_toEndOf="@+id/sl9348932"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.875"
+
+
+                        ></androidx.appcompat.widget.AppCompatEditText>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"></View>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/create_pin_layout12"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    app:layout_constraintBottom_toTopOf="@+id/appCompatButton"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.1"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/create_pin_layout1"
+                    app:layout_constraintWidth_percent="0.9">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/sl48959"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        app:tint="@color/white"
+                        android:src="@drawable/three_dot_h"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+
+
+                    <View
+                        android:id="@+id/sl93489"
+                        android:layout_width="2dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@color/dark_white"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toEndOf="@+id/sl48959"
+                        app:layout_constraintTop_toTopOf="parent"></View>
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@null"
+                        android:fontFamily="@font/avenir_heavy"
+                        android:hint="@string/reenter_pin"
+                        android:inputType="numberPassword"
+                        android:textColor="@color/white"
+                        app:layout_constraintStart_toEndOf="@+id/sl93489"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.875"
+
+
+                        ></androidx.appcompat.widget.AppCompatEditText>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"></View>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/appCompatButton"
+                    android:layout_width="0dp"
+
+                    android:layout_height="0dp"
+                    android:background="@drawable/custom_yellow_button"
+                    android:text="@string/submit"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.15"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/create_pin_layout12"
+                    app:layout_constraintWidth_percent="0.3"></androidx.appcompat.widget.AppCompatButton>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

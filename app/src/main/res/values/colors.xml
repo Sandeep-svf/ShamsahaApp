@@ -7,9 +7,14 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="white_light">#E3D0D0</color>
+
 
 
     <color name="dark_pick_them">#C03B70</color>
+    <color name="dark_pick_them2">#C84D7E</color>
+    <color name="ultra_dark_pick_them">#C50E57</color>
+    <color name="light_dark_pick_them">#C03B70</color>
     <color name="dark_white">#878485</color>
     <color name="pick_them">#E54184</color>
     <color name="purple_them">#5E5684</color>
