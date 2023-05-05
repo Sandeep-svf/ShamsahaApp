@@ -47,4 +47,13 @@
     <string name="enter_four_digit">Enter 4 digit PIN number</string>
     <string name="reenter_pin">Re-enter your PIN number</string>
     <string name="resources">Resources</string>
+    <string name="volunteer_login">Volunteer Login</string>
+    <string name="amplify_your">Amplify your</string>
+    <string name="petential">potential</string>
+    <string name="password">Password</string>
+    <string name="remember_me">remember me</string>
+    <string name="forget_password">forgot password?</string>
+    <string name="login">Login</string>
+    <string name="or_login_with">or login with</string>
+    <string name="new_user">new user? register here</string>
 </resources>

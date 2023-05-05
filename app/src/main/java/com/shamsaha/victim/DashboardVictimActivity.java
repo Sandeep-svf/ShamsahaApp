@@ -28,6 +28,7 @@ import com.shamsaha.victim.fragment.EventMediaFragment;
 import com.shamsaha.victim.fragment.HomeFragment;
 import com.shamsaha.victim.fragment.LockAppFragment;
 import com.shamsaha.victim.fragment.ResourcesFragment;
+import com.shamsaha.victim.fragment.VolunteerLoginFragment;
 
 public class DashboardVictimActivity extends AppCompatActivity {
 
@@ -41,13 +42,20 @@ public class DashboardVictimActivity extends AppCompatActivity {
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main);
         set_animation();
 
-
-
         binding.homeVictimLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 HomeFragment homeFragment = new HomeFragment();
                 replace_fragment(homeFragment);
+            }
+        });
+
+
+        binding.volLoginLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                VolunteerLoginFragment volunteerLoginFragment = new VolunteerLoginFragment();
+                replace_fragment(volunteerLoginFragment);
             }
         });
 
