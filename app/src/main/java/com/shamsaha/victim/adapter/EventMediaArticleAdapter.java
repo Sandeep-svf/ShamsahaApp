@@ -1,13 +1,10 @@
 package com.shamsaha.victim.adapter;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.shamsaha.R;
 
 public class EventMediaArticleAdapter extends RecyclerView.Adapter<ArticleViewHolder> {
