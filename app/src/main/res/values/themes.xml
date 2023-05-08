@@ -15,7 +15,18 @@
         <item name="android:windowAnimationStyle">@style/MyCustomActivityAnimation</item>
     </style>
 
+    <style name="CornerCut" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
 
+    </style>
+
+    <style name="CornerCutStart" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">24dp</item>
+        <item name="cornerSizeBottomLeft">24dp</item>
+
+    </style>
 
 
     <style name="MyCustomActivityAnimation" parent="@android:style/Animation.Activity">

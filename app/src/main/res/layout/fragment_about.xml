@@ -190,7 +190,67 @@
                                     app:layout_constraintEnd_toEndOf="parent"
                                     android:background="@drawable/custom_radius_corner"
                                     app:layout_constraintHeight_percent="0.45"
-                                    ></androidx.constraintlayout.widget.ConstraintLayout>
+                                    >
+
+                                    <com.google.android.material.imageview.ShapeableImageView
+                                        android:id="@+id/Director_image_view"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintHeight_percent="0.925"
+
+                                        android:adjustViewBounds="true"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.025"
+                                        android:src="@drawable/ic_launcher_background"
+                                        app:shapeAppearance="@style/CornerCutStart"
+                                        android:scaleType="centerCrop"
+
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintWidth_percent="0.325"></com.google.android.material.imageview.ShapeableImageView>
+
+
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/director_name"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:layout_constraintTop_toTopOf="@+id/Director_image_view"
+                                        app:layout_constraintStart_toEndOf="@+id/Director_image_view"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.1"
+                                        android:text="Marry-Justin Todd"
+                                        android:textColor="@color/pick_them"
+                                        android:textSize="@dimen/radious_14"
+                                        android:fontFamily="@font/avenir_heavy"
+                                        android:textStyle="bold"
+                                        ></androidx.appcompat.widget.AppCompatTextView>
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/designation_name"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:layout_constraintTop_toBottomOf="@+id/director_name"
+                                        app:layout_constraintStart_toStartOf="@+id/director_name"
+                                        android:text="MPH, MA"
+                                        android:textSize="@dimen/text_normal_12sp"
+                                        android:fontFamily="@font/avenir_heavy"
+                                        ></androidx.appcompat.widget.AppCompatTextView>
+                                    <androidx.appcompat.widget.AppCompatTextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:layout_constraintTop_toBottomOf="@+id/designation_name"
+                                       app:layout_constraintStart_toStartOf="@+id/designation_name"
+
+
+                                        android:text="Shamsaha founder and excutive director"
+                                        android:textSize="@dimen/text_normal_12sp"
+                                        android:fontFamily="@font/avenir_heavy"
+                                        ></androidx.appcompat.widget.AppCompatTextView>
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
                                 <androidx.constraintlayout.widget.ConstraintLayout
                                     android:layout_width="0dp"
                                     android:layout_height="0dp"
@@ -202,7 +262,71 @@
                                     app:layout_constraintEnd_toEndOf="parent"
                                     android:background="@drawable/custom_radius_corner"
                                     app:layout_constraintHeight_percent="0.45"
-                                    ></androidx.constraintlayout.widget.ConstraintLayout>
+                                    >
+
+
+
+
+                                    <com.google.android.material.imageview.ShapeableImageView
+                                        android:id="@+id/Founder_image_view"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintHeight_percent="0.925"
+
+                                        android:adjustViewBounds="true"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.025"
+                                        android:src="@drawable/ic_launcher_background"
+                                        app:shapeAppearance="@style/CornerCutStart"
+                                        android:scaleType="centerCrop"
+
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintWidth_percent="0.325"></com.google.android.material.imageview.ShapeableImageView>
+
+
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/founder_name"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:layout_constraintTop_toTopOf="@+id/Founder_image_view"
+                                        app:layout_constraintStart_toEndOf="@+id/Founder_image_view"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.1"
+                                        android:text="Marry-Justin Todd"
+                                        android:textColor="@color/pick_them"
+                                        android:textSize="@dimen/radious_14"
+                                        android:fontFamily="@font/avenir_heavy"
+                                        android:textStyle="bold"
+                                        ></androidx.appcompat.widget.AppCompatTextView>
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/designation_name2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:layout_constraintTop_toBottomOf="@+id/founder_name"
+                                        app:layout_constraintStart_toStartOf="@+id/founder_name"
+                                        android:text="MPH, MA"
+                                        android:textSize="@dimen/text_normal_12sp"
+                                        android:fontFamily="@font/avenir_heavy"
+                                        ></androidx.appcompat.widget.AppCompatTextView>
+                                    <androidx.appcompat.widget.AppCompatTextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:layout_constraintTop_toBottomOf="@+id/designation_name2"
+                                        app:layout_constraintStart_toStartOf="@+id/designation_name2"
+
+
+                                        android:text="Shamsaha founder and excutive director"
+                                        android:textSize="@dimen/text_normal_12sp"
+                                        android:fontFamily="@font/avenir_heavy"
+                                        ></androidx.appcompat.widget.AppCompatTextView>
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
 
 
                             </androidx.constraintlayout.widget.ConstraintLayout>

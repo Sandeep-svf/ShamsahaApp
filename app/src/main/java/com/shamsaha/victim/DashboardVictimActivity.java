@@ -25,6 +25,7 @@ import com.shamsaha.victim.fragment.AboutFragment;
 import com.shamsaha.victim.fragment.ChatFragment;
 import com.shamsaha.victim.fragment.ContactUsFragment;
 import com.shamsaha.victim.fragment.EventMediaFragment;
+import com.shamsaha.victim.fragment.GetInvolveFragment;
 import com.shamsaha.victim.fragment.HomeFragment;
 import com.shamsaha.victim.fragment.LockAppFragment;
 import com.shamsaha.victim.fragment.ResourcesFragment;
@@ -87,9 +88,10 @@ public class DashboardVictimActivity extends AppCompatActivity {
         binding.getInvolvedMenuLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
-
+                GetInvolveFragment getInvolveFragment = new GetInvolveFragment();
+                replace_fragment(getInvolveFragment);
+                binding.menuLayout.setVisibility(View.GONE);
+                menuFlag = false;
             }
         });
 
