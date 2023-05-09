@@ -9,10 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 public class API_Client {
-        public static final String BASE_URL = " https://itdevelopmentservices.com/shamsha/apis/";
-       // public static final String TEMP_BASE_URL = "https://mobileandwebsitedevelopment.com/LivelyPencil/api/";
-       //public static final String PAYMENT_GETWAY = "https://itdevelopmentservices.com/thegaskiosk/admin/payment?user_id=";
-
+        public static final String BASE_URL = "https://itdevelopmentservices.com/shamsha/apis/";
 
         private static Retrofit retrofit = null;
         private static Api api;

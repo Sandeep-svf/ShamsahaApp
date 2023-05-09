@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/drawable/alert_bg.xml" value="0.18055555555555555" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/drawable/custom_bg_learn_more.xml" value="0.17962962962962964" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/drawable/custom_card_view_radious_chat.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/drawable/custom_card_view_radious_per_country.xml" value="0.22552083333333334" />
@@ -18,8 +19,10 @@
         <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/drawable/ic_continue_credentials.xml" value="0.17962962962962964" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/drawable/ic_continue_credentials2.xml" value="0.17962962962962964" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/drawable/ic_credential_2.xml" value="0.17314814814814813" />
+        <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/layout/about_details.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/layout/activity_main.xml" value="0.18" />
-        <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/layout/advisory_board_holder_design.xml" value="0.5" />
+        <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/layout/activity_splash.xml" value="0.209375" />
+        <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/layout/advisory_board_holder_design.xml" value="0.22" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/layout/article_view_holder.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/layout/fragment_about.xml" value="0.2" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/layout/fragment_articles.xml" value="0.22447916666666667" />
@@ -27,7 +30,7 @@
         <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/layout/fragment_contact_us.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/layout/fragment_event_media.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/layout/fragment_get_involve.xml" value="0.33" />
-        <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/layout/fragment_home.xml" value="0.22" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/layout/fragment_lock_app.xml" value="0.25" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/layout/fragment_per_country.xml" value="0.1953125" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/layout/fragment_photos.xml" value="0.22447916666666667" />

@@ -1,7 +1,6 @@
 package com.shamsaha.victim;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -15,8 +14,6 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.ImageView;
-import android.widget.ListPopupWindow;
 import android.widget.PopupWindow;
 
 import com.shamsaha.R;
@@ -29,7 +26,7 @@ import com.shamsaha.victim.fragment.GetInvolveFragment;
 import com.shamsaha.victim.fragment.HomeFragment;
 import com.shamsaha.victim.fragment.LockAppFragment;
 import com.shamsaha.victim.fragment.ResourcesFragment;
-import com.shamsaha.victim.fragment.VolunteerLoginFragment;
+import com.shamsaha.volunteer.VolunteerLoginFragment;
 
 public class DashboardVictimActivity extends AppCompatActivity {
 
@@ -160,14 +157,13 @@ public class DashboardVictimActivity extends AppCompatActivity {
         animFadeIn = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
         animMoveUp = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_up);
         animMoveDown = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_down);
-
-
     }
+
     private void replace_fragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         //((ConstraintLayout) findViewById(R.id.container)).removeAllViews();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left, R.anim.enter_from_left, R.anim.exit_to_right);
+        //fragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left, R.anim.enter_from_left, R.anim.exit_to_right);
         fragmentTransaction.add(R.id.container, fragment);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
@@ -181,7 +177,6 @@ public class DashboardVictimActivity extends AppCompatActivity {
         //btnMenu.setAnimation(animSlideInTop);
         int width = 900;
         int height = 900;
-
 
        // int height = 0;
         try {
@@ -197,13 +192,11 @@ public class DashboardVictimActivity extends AppCompatActivity {
         popupWindow.setWidth(width*3/6);
         popupWindow.setHeight(height*3/8);
 
-
     /*    close.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 popupWindow.dismiss();
             }
         });*/
-
     }
 }

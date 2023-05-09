@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -12,6 +12,7 @@
         android:layout_height="match_parent"
         android:background="@color/pick_them"
         tools:context=".victim.dashboard.HomeFragment">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -35,19 +36,19 @@
 
 
                 <androidx.appcompat.widget.AppCompatImageView
-                    android:visibility="gone"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-
-                    app:layout_constraintWidth_percent="0.5"
-                    app:layout_constraintHeight_percent="0.25"
-                    android:src="@drawable/logo"
                     android:scaleType="fitXY"
+                    android:src="@drawable/logo"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    app:layout_constraintHeight_percent="0.25"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.15"
+                    app:layout_constraintWidth_percent="0.5"
 
 
                     ></androidx.appcompat.widget.AppCompatImageView>
@@ -55,31 +56,31 @@
                 <TextView
                     android:id="@+id/textView11"
                     android:layout_width="0dp"
-                    android:gravity="center"
-                    android:textColor="@color/white"
-                    android:fontFamily="@font/avenir_heavy"
-                    android:textSize="@dimen/text_heading_ultra_18sp"
-                    app:layout_constraintWidth_percent="0.9"
                     android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toTopOf="@+id/sl342342"
+                    android:fontFamily="@font/avenir_heavy"
+                    android:gravity="center"
                     android:text="@string/raw_data_homepage"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_heading_ultra_18sp"
+                    app:layout_constraintBottom_toTopOf="@+id/sl342342"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.9" />
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="0dp"
-                    android:gravity="center"
                     android:id="@+id/sl342342"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    app:layout_constraintWidth_percent="0.9"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    android:gravity="center"
                     android:text="@string/raw_data_homepage"
-                    android:textSize="@dimen/text_normal_12sp"
                     android:textColor="@color/white"
+                    android:textSize="@dimen/text_normal_12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView11"
+                    app:layout_constraintWidth_percent="0.9"
 
                     ></androidx.appcompat.widget.AppCompatTextView>
 
@@ -88,34 +89,32 @@
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/sl456"
                 android:layout_width="0dp"
-                android:src="@drawable/logo"
                 android:layout_height="0dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@drawable/logo"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintVertical_bias="0.0225"
-                app:layout_constraintWidth_percent="0.5"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHeight_percent="0.075"
-                ></androidx.appcompat.widget.AppCompatImageView>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0225"
+                app:layout_constraintWidth_percent="0.5"></androidx.appcompat.widget.AppCompatImageView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
-                android:layout_margin="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
+                android:layout_margin="5dp"
                 app:cardCornerRadius="14dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHeight_percent="0.29"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/sl456" >
+                app:layout_constraintTop_toBottomOf="@+id/sl456">
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/home_pic"
                     android:scaleType="centerCrop"
-                    ></androidx.appcompat.widget.AppCompatImageView>
+                    android:src="@drawable/home_pic"></androidx.appcompat.widget.AppCompatImageView>
 
             </androidx.cardview.widget.CardView>
 
@@ -123,67 +122,66 @@
                 android:id="@+id/cardView2"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:background="@drawable/custom_layout_purple_dashboard"
                 android:layout_margin="5dp"
+                android:background="@drawable/custom_layout_purple_dashboard"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHeight_percent="0.195"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" >
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
 
                 <TextView
                     android:id="@+id/textView12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/avenir_heavy"
                     android:text="@string/how_we_have_help"
                     android:textColor="@color/purple_them"
                     android:textSize="@dimen/text_heading_ultra_18sp"
-                    android:fontFamily="@font/avenir_heavy"
-                    app:layout_constraintVertical_bias="0.05"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.05" />
 
                 <TextView
                     android:id="@+id/textView13"
                     android:layout_width="0dp"
-                    app:layout_constraintWidth_percent="0.9"
                     android:layout_height="0dp"
-                    app:layout_constraintHeight_percent="0.4"
                     android:text="@string/how_we_have_help_2"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.4"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView12" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView12"
+                    app:layout_constraintWidth_percent="0.9" />
 
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="0dp"
                     android:layout_height="0dp"
 
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-
-                    app:layout_constraintHeight_percent="0.25"
-                    app:layout_constraintWidth_percent="0.3"
                     android:background="@drawable/custom_bg_learn_more"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.25"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.95"
+                    app:layout_constraintWidth_percent="0.3"
 
                     >
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/avenir_heavy"
+                        android:gravity="center"
                         android:text="@string/learn_more"
+                        android:textColor="@color/purple_them"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:gravity="center"
-                        android:fontFamily="@font/avenir_heavy"
-                        android:textColor="@color/purple_them"
-                        ></androidx.appcompat.widget.AppCompatTextView>
+                        app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.AppCompatTextView>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -206,10 +204,10 @@
                     android:id="@+id/textView14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/avenir_heavy"
                     android:text="@string/did_you_know"
                     android:textColor="@color/purple_them"
                     android:textSize="@dimen/text_heading_ultra_18sp"
-                    android:fontFamily="@font/avenir_heavy"
                     app:layout_constraintBottom_toBottomOf="parent"
 
                     app:layout_constraintHorizontal_bias="0.046"
@@ -243,11 +241,11 @@
                     android:id="@+id/sl78934273"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    app:layout_constraintWidth_percent="0.9"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/imageView5"
+                    app:layout_constraintWidth_percent="0.9"
 
                     >
 
@@ -255,9 +253,9 @@
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintWidth_percent="0.33"
 
                         >
@@ -266,54 +264,52 @@
                             android:id="@+id/women_em_number"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
+                            android:gravity="center"
+                            android:text="1000+"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_heading_super_ultra_24sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.4"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-
-                            android:text="1000+"
-                            android:textSize="@dimen/text_heading_super_ultra_24sp"
-                            android:textColor="@color/white"
                             app:layout_constraintWidth_percent="0.99"
-                            app:layout_constraintHeight_percent="0.4"
-                            android:gravity="center_vertical"
 
                             ></androidx.appcompat.widget.AppCompatTextView>
 
                         <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/women_em_number"
+                            android:gravity="center"
+                            android:text="@string/women_em"
+                            android:textColor="@color/white"
+
+                            android:textSize="@dimen/text_normal_12sp"
                             app:layout_constraintEnd_toEndOf="parent"
 
-                            android:text="@string/women_em"
-                            android:textSize="@dimen/text_normal_12sp"
-
-                            android:textColor="@color/white"
-                            app:layout_constraintWidth_percent="0.99"
                             app:layout_constraintHeight_percent="0.5"
-                            android:gravity="center_vertical"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/women_em_number"
+                            app:layout_constraintWidth_percent="0.99"
 
                             ></androidx.appcompat.widget.AppCompatTextView>
 
                         <View
                             android:layout_width="2dp"
                             android:layout_height="match_parent"
-                            app:layout_constraintTop_toTopOf="parent"
+                            android:background="@drawable/custom_line_home"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            android:background="@drawable/custom_line_home"
-                            ></View>
+                            app:layout_constraintTop_toTopOf="parent"></View>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintWidth_percent="0.33"
 
                         >
@@ -322,93 +318,79 @@
                             android:id="@+id/women_em_number2"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
+                            android:gravity="center"
+                            android:text="33%"
+                            android:textColor="@color/white"
+
+                            android:textSize="@dimen/text_heading_super_ultra_24sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.4"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-
-                            android:text="33%"
-                            android:textSize="@dimen/text_heading_super_ultra_24sp"
-                            android:textColor="@color/white"
                             app:layout_constraintWidth_percent="0.99"
-                            app:layout_constraintHeight_percent="0.4"
-                            android:gravity="center_vertical"
 
                             ></androidx.appcompat.widget.AppCompatTextView>
 
                         <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/women_em_number2"
+                            android:gravity="center"
+                            android:text="@string/of_women"
+                            android:textColor="@color/white"
+
+                            android:textSize="@dimen/text_normal_12sp"
                             app:layout_constraintEnd_toEndOf="parent"
 
-                            android:text="@string/of_women"
-                            android:textSize="@dimen/text_normal_12sp"
-
-                            android:textColor="@color/white"
-                            app:layout_constraintWidth_percent="0.99"
                             app:layout_constraintHeight_percent="0.5"
-                            android:gravity="center_vertical"
-
-                            ></androidx.appcompat.widget.AppCompatTextView>
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/women_em_number2"
+                            app:layout_constraintWidth_percent="0.99"></androidx.appcompat.widget.AppCompatTextView>
 
                         <View
                             android:layout_width="2dp"
                             android:layout_height="match_parent"
-                            app:layout_constraintTop_toTopOf="parent"
+                            android:background="@drawable/custom_line_home"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            android:background="@drawable/custom_line_home"
-                            ></View>
+                            app:layout_constraintTop_toTopOf="parent"></View>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintWidth_percent="0.33"
-
-                        >
+                        app:layout_constraintWidth_percent="0.33">
 
                         <androidx.appcompat.widget.AppCompatTextView
                             android:id="@+id/women_em_number3"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
+                            android:gravity="center"
+                            android:text="$12"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_heading_super_ultra_24sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.4"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-
-                            android:text="$12"
-                            android:textSize="@dimen/text_heading_super_ultra_24sp"
-                            android:textColor="@color/white"
-                            app:layout_constraintWidth_percent="0.99"
-                            app:layout_constraintHeight_percent="0.4"
-                            android:gravity="center_vertical"
-
-                            ></androidx.appcompat.widget.AppCompatTextView>
+                            app:layout_constraintWidth_percent="0.99"></androidx.appcompat.widget.AppCompatTextView>
 
                         <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="0dp"
                             android:layout_height="0dp"
+                            android:gravity="center"
+                            android:text="@string/trillion_lost"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_normal_12sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.5"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/women_em_number3"
-                            app:layout_constraintEnd_toEndOf="parent"
-
-                            android:text="@string/trillion_lost"
-                            android:textSize="@dimen/text_normal_12sp"
-
-                            android:textColor="@color/white"
-                            app:layout_constraintWidth_percent="0.99"
-                            app:layout_constraintHeight_percent="0.5"
-                            android:gravity="center_vertical"
-
-                            ></androidx.appcompat.widget.AppCompatTextView>
-
+                            app:layout_constraintWidth_percent="0.99"></androidx.appcompat.widget.AppCompatTextView>
 
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -419,7 +401,6 @@
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

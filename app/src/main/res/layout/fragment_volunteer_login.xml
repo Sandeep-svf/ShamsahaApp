@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/pick_them"
-        tools:context=".victim.fragment.VolunteerLoginFragment">
+        tools:context=".volunteer.VolunteerLoginFragment">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout8"
             android:layout_width="match_parent"
@@ -46,6 +46,7 @@
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
+
 
                 app:layout_constraintHeight_percent="0.3"
                 app:layout_constraintWidth_percent="0.1"
@@ -186,7 +187,7 @@
 
             <View
                 android:id="@+id/sl934893"
-                android:layout_width="2dp"
+                android:layout_width="1dp"
                 android:layout_height="25dp"
                 android:layout_marginStart="5dp"
                 android:background="@color/dark_white"
@@ -246,7 +247,7 @@
                 android:layout_width="2dp"
                 android:layout_height="25dp"
                 android:layout_marginStart="5dp"
-                android:background="@color/dark_white"
+                android:background="@color/white"
                 app:layout_constraintStart_toEndOf="@+id/sl4895"
                 app:layout_constraintTop_toTopOf="parent"></View>
 

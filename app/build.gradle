@@ -5,7 +5,6 @@ plugins {
 android {
     compileSdk 33
 
-
     defaultConfig {
         applicationId "com.shamsaha"
         minSdk 21
@@ -32,7 +31,6 @@ android {
 }
 
 def retrofitVersion = '2.8.2'
-
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.6.0'
