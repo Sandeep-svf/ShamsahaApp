@@ -10,6 +10,7 @@ import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 public class API_Client {
         public static final String BASE_URL = "https://itdevelopmentservices.com/shamsha/apis/";
+        public static final String BASE_IMAGE_URL = "https://itdevelopmentservices.com/shamsha/assets/images/";
 
         private static Retrofit retrofit = null;
         private static Api api;

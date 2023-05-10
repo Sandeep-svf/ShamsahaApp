@@ -15,8 +15,10 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.shamsaha.R;
+import com.shamsaha.databinding.FragmentHomeBinding;
 import com.shamsaha.retrofit.API_Client;
 import com.shamsaha.victim.model.HomeModel;
+import com.shamsaha.victim.model.res.HomeRes;
 
 import org.json.JSONObject;
 
@@ -29,12 +31,17 @@ import retrofit2.Response;
 
 public class HomeFragment extends Fragment {
 
+    FragmentHomeBinding binding;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view  = inflater.inflate(R.layout.fragment_home, container, false);
+        binding  = FragmentHomeBinding.inflate(inflater, container, false);
+        View view = binding.getRoot();
         home_api(view);
+
+
 
 
         return view;
@@ -62,7 +69,16 @@ public class HomeFragment extends Fragment {
 
                             if (success.equals("true") || success.equals("True")) {
 
-                                Toast.makeText(getActivity(), "Api called successfully..", Toast.LENGTH_SHORT).show();
+                                HomeModel homeModel = response.body();
+                                HomeRes homeRes = homeModel.getData();
+
+
+                                binding.textView11.setText(homeRes.getHeading1());
+                                binding.sl342342.setText(homeRes.getContent1());
+                                binding.textView12.setText(homeRes.getHeading2());
+                                binding.textView13.setText(homeRes.getContent2());
+
+                                Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
 
                             } else {
 

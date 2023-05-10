@@ -58,4 +58,10 @@
     <string name="new_user">new user? register here</string>
     <string name="raw_data">What is women empowerment? Women empowerment can be defined to promoting women sense of self-worth, their ability to determine their own choices, and their right to influence social change for themselves.</string>
     <string name="sponser_now">Sponsor Now</string>
+    <string name="select_resources">Select Resources</string>
+    <string name="please_enter_name">Please enter name</string>
+    <string name="please_enter_phone">Please enter phone number</string>
+    <string name="please_enter_email">Please enter email</string>
+    <string name="please_enter_valid_email">Please enter valid email address</string>
+    <string name="please_enter_message">Please enter message</string>
 </resources>
