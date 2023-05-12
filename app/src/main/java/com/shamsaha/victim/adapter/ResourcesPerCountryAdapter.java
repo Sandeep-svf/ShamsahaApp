@@ -51,6 +51,8 @@ public class ResourcesPerCountryAdapter extends RecyclerView.Adapter<PerCountryV
             }
         });
 
+
+
     }
 
     @Override

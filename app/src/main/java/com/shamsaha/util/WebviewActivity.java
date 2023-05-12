@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.util.Log;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
@@ -14,6 +15,7 @@ import com.shamsaha.R;
 public class WebviewActivity extends AppCompatActivity {
     private String key = "";
     private String url = "";
+    private String finalUrl = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,9 +24,14 @@ public class WebviewActivity extends AppCompatActivity {
 
         key = getIntent().getStringExtra("key");
         url = getIntent().getStringExtra("url");
-        if(key.equals(UtilFunction.sstKey)){
 
+        if(key.equals(UtilFunction.sstKey)){
+            finalUrl = UtilFunction.pdfUrl+url;
+        }else if(key.equals(UtilFunction.googleLocationKey)){
+            finalUrl = url;
         }
+
+        Log.e("test_sam_web","key :"+key+"url :"+finalUrl);
 
 
         final ProgressDialog pd = ProgressDialog.show(WebviewActivity.this, "Loading", "Please wait, Shamasaha loading in process...", true);
@@ -55,7 +62,7 @@ public class WebviewActivity extends AppCompatActivity {
 
         });
 
-        mWebview .loadUrl(url);
+        mWebview .loadUrl(finalUrl);
 
     }
 }

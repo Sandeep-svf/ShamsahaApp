@@ -85,7 +85,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintHeight_percent="0.225"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout8">
@@ -149,7 +149,7 @@
                         android:layout_marginTop="10dp"
                         android:gravity="center"
                         android:textColor="@color/white"
-                        android:fontFamily="@font/swissra_normal"
+                        android:fontFamily="@font/avenir_heavy"
                         />
 
 
@@ -177,7 +177,7 @@
                             android:textColor="@color/white"
                             android:textColorHint="@color/hint_color"
                             android:textSize="@dimen/text_normal_12sp"
-                            android:fontFamily="@font/swissra_normal"
+                            android:fontFamily="@font/avenir_heavy"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             android:background="@null"
@@ -227,7 +227,7 @@
                             android:inputType="number"
                             android:textColorHint="@color/hint_color"
                             android:textSize="@dimen/text_normal_12sp"
-                            android:fontFamily="@font/swissra_normal"
+                            android:fontFamily="@font/avenir_heavy"
                             android:hint="@string/mobile"
                             app:layout_constraintWidth_percent="0.9"
 
@@ -274,7 +274,7 @@
                             android:hint="@string/email"
                             android:textColorHint="@color/hint_color"
                             android:textSize="@dimen/text_normal_12sp"
-                            android:fontFamily="@font/swissra_normal"
+                            android:fontFamily="@font/avenir_heavy"
                             android:inputType="textEmailAddress"
                             app:layout_constraintWidth_percent="0.9"
 
@@ -314,7 +314,7 @@
                             android:hint="@string/message"
                             android:textColorHint="@color/hint_color"
                             android:textSize="@dimen/text_normal_12sp"
-                            android:fontFamily="@font/swissra_normal"
+                            android:fontFamily="@font/avenir_heavy"
 
 
                             ></androidx.appcompat.widget.AppCompatEditText>
@@ -343,6 +343,7 @@
 
 
                         <CheckBox
+
                             android:layout_width="25dp"
                             android:layout_height="25dp"
                             android:gravity="center_vertical"
@@ -357,9 +358,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/i_have_read"
-                            android:layout_marginStart="10dp"
-                            android:fontFamily="@font/swissra_normal"
+                            android:layout_marginStart="5dp"
+                            android:fontFamily="@font/avenir_heavy"
                             android:textColor="@color/white"
+                            android:textSize="@dimen/text_normal_12sp"
                             app:layout_constraintTop_toTopOf="@+id/checkbox_contact_us"
                             app:layout_constraintBottom_toBottomOf="@+id/checkbox_contact_us"
                             app:layout_constraintStart_toEndOf="@+id/checkbox_contact_us"/>
@@ -409,11 +411,11 @@
                             android:id="@+id/address_contact_us"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/swissra_normal"
+                            android:fontFamily="@font/avenir_heavy"
                             android:gravity="center"
                             android:text="A-03 Sector 59,Tower-West Bahrain Financial,Kingdom Of Dhrma, Krishna Devoti temple, Noida, UP 201306"
                             android:textColor="@color/white"
-
+                            android:textSize="@dimen/text_normal_12sp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -422,6 +424,7 @@
 
 
                         <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/location_image_contact_us"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             app:layout_constraintEnd_toEndOf="parent"

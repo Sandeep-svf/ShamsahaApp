@@ -67,4 +67,6 @@
     <string name="title_activity_fullscreen">FullscreenActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="something_went_wrong">Something went wrong. Please try again.</string>
+    <string name="please_check_privacy_pocily">Please check privacy policy.</string>
 </resources>

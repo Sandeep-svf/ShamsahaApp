@@ -1,6 +1,7 @@
 package com.shamsaha.victim.fragment;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -16,6 +17,7 @@ import com.shamsaha.R;
 import com.shamsaha.databinding.FragmentContactUsBinding;
 import com.shamsaha.retrofit.API_Client;
 import com.shamsaha.util.UtilFunction;
+import com.shamsaha.util.WebviewActivity;
 import com.shamsaha.victim.model.CommonModel;
 import com.shamsaha.victim.model.ContactUsDataModel;
 import com.shamsaha.victim.model.res.ContactUsDataRes;
@@ -31,6 +33,7 @@ import retrofit2.Response;
 public class ContactUsFragment extends Fragment {
 
     FragmentContactUsBinding binding;
+    private String locationUrl = "";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -38,14 +41,27 @@ public class ContactUsFragment extends Fragment {
         // Inflate the layout for this fragment
         binding = FragmentContactUsBinding.inflate(inflater, container, false);
         View view = binding.getRoot();
-
         get_contact_data_api();
+
+        binding.locationImageContactUs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!locationUrl.equals("")){
+                    Intent intent = new Intent(getActivity(), WebviewActivity.class);
+                    intent.putExtra("url",locationUrl);
+                    intent.putExtra("key",UtilFunction.googleLocationKey);
+                    startActivity(intent);
+                }
+            }
+        });
 
         binding.submitButtonContactUs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(validation()){
                     contact_us_api();
+                }else{
+                    Toast.makeText(getActivity(), getResources().getString(R.string.something_went_wrong), Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -78,13 +94,13 @@ public class ContactUsFragment extends Fragment {
                                 ContactUsDataModel contactUsDataModel = response.body();
                                 ContactUsDataRes contactUsDataRes = contactUsDataModel.getData();
 
-
                                 Glide.with(getActivity())
                                         .load(API_Client.BASE_IMAGE_URL+contactUsDataRes.getImage())
                                         .placeholder(R.drawable.ic_launcher_background)
                                         .into(binding.imageContactUs);
                                 binding.textView4.setText(contactUsDataRes.getContent());
                                 binding.addressContactUs.setText(contactUsDataRes.getAddress());
+                                locationUrl = contactUsDataRes.getGoogleMap();
 
                                 Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
                             } else {
@@ -176,9 +192,13 @@ public class ContactUsFragment extends Fragment {
                             String success = String.valueOf(response.body().getSuccess());
 
                             if (success.equals("true") || success.equals("True")) {
+                                        binding.nameContactUs.setText("");
+                                        binding.phoneContactUs.setText("");
+                                        binding.emailContactUs.setText("");
+                                        binding.messageContactUs.setText("");
                                 Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
                             } else {
-
+                                Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
                             }
 
                         } else {
@@ -241,7 +261,6 @@ public class ContactUsFragment extends Fragment {
         }
 
     private boolean validation() {
-
         if(binding.nameContactUs.getText().toString().equals("")){
             Toast.makeText(getActivity(), getResources().getString(R.string.please_enter_name), Toast.LENGTH_SHORT).show();
             return false;
@@ -257,8 +276,10 @@ public class ContactUsFragment extends Fragment {
         }else if(binding.messageContactUs.getText().toString().equals("")){
             Toast.makeText(getActivity(), getResources().getString(R.string.please_enter_message), Toast.LENGTH_SHORT).show();
             return false;
+        }else if(!binding.checkboxContactUs.isChecked()){
+            Toast.makeText(getActivity(), getResources().getString(R.string.please_check_privacy_pocily), Toast.LENGTH_SHORT).show();
+            return false;
         }
-
         return true;
     }
 }
