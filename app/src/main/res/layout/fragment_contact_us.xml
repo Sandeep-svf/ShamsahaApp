@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <contactUsDataRes>
+    <data>
 
-    </contactUsDataRes>
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -91,6 +91,7 @@
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout8">
 
             <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_contact_us"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_launcher_background"

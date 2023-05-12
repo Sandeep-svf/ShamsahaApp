@@ -64,4 +64,7 @@
     <string name="please_enter_email">Please enter email</string>
     <string name="please_enter_valid_email">Please enter valid email address</string>
     <string name="please_enter_message">Please enter message</string>
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

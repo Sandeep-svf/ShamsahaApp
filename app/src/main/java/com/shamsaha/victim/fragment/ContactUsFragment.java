@@ -81,10 +81,10 @@ public class ContactUsFragment extends Fragment {
 
                                 Glide.with(getActivity())
                                         .load(API_Client.BASE_IMAGE_URL+contactUsDataRes.getImage())
-                                        .placeholder(R.drawable.logo)
-                                        .into(binding.)
-
-
+                                        .placeholder(R.drawable.ic_launcher_background)
+                                        .into(binding.imageContactUs);
+                                binding.textView4.setText(contactUsDataRes.getContent());
+                                binding.addressContactUs.setText(contactUsDataRes.getAddress());
 
                                 Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
                             } else {
