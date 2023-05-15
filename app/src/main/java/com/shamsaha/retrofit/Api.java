@@ -40,5 +40,4 @@ public interface Api {
     @GET("shamsha/core_script/survivor_tools.php")
     Call<SSTModel> SST_MODEL_CALL();
 
-
 }
