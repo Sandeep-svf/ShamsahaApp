@@ -57,9 +57,6 @@ public class AboutFragment extends Fragment {
         runthread();
         runthread1();
 
-
-
-
         return binding.getRoot();
     }
     private void runthread1() {
@@ -71,15 +68,6 @@ public class AboutFragment extends Fragment {
                 about_api();
             }
         });
-
-       /* Thread thread2 = new Thread(new Runnable() {
-            @Override
-            public void run() {
-
-
-            }
-        });
-        thread2.start();*/
     }
 
 
@@ -92,16 +80,6 @@ public class AboutFragment extends Fragment {
                 board_member();
             }
         });
-       /*
-        Thread thread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-
-
-
-            }
-        });
-        thread.start();*/
 }
 
     private void board_member() {
@@ -305,8 +283,6 @@ public class AboutFragment extends Fragment {
             });
 
         }
-
-
 
     private int dpToPx(int dp) {
         Resources r = getResources();

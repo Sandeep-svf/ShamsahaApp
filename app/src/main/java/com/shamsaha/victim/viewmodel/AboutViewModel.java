@@ -1,23 +1,8 @@
-package com.shamsaha.viewmodel;
-
-import android.util.Log;
+package com.shamsaha.victim.viewmodel;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
-
-import com.shamsaha.retrofit.API_Client;
-import com.shamsaha.retrofit.Api;
-import com.shamsaha.victim.model.AboutModel;
-import com.shamsaha.victim.model.res.AboutRes;
-
-import org.jetbrains.annotations.NotNull;
-
-import java.util.List;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 /**
  * This is the ViewModel class that handles the data and network requests
