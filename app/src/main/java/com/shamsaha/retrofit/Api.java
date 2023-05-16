@@ -1,6 +1,7 @@
 package com.shamsaha.retrofit;
 
 
+import com.shamsaha.victim.model.AboutModel;
 import com.shamsaha.victim.model.CommonModel;
 import com.shamsaha.victim.model.ContactUsDataModel;
 import com.shamsaha.victim.model.HomeModel;
@@ -39,5 +40,15 @@ public interface Api {
 
     @GET("shamsha/core_script/survivor_tools.php")
     Call<SSTModel> SST_MODEL_CALL();
+
+
+   /* @POST("Get_involved")
+    @Call<> ();*/
+
+    @POST("about")
+    Call<AboutModel> ABOUT_MODEL_CALL();
+
+    /*@POST("bmember")
+    Call<>();*/
 
 }

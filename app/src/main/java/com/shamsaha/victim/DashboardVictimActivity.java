@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -18,6 +19,7 @@ import android.widget.PopupWindow;
 
 import com.shamsaha.R;
 import com.shamsaha.databinding.ActivityMainBinding;
+import com.shamsaha.util.ImageUtils;
 import com.shamsaha.victim.fragment.AboutFragment;
 import com.shamsaha.victim.fragment.ChatFragment;
 import com.shamsaha.victim.fragment.ContactUsFragment;
@@ -39,6 +41,9 @@ public class DashboardVictimActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main);
         set_animation();
+
+
+
 
         binding.homeVictimLayout.setOnClickListener(new View.OnClickListener() {
             @Override
