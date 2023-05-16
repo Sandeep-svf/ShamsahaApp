@@ -10,7 +10,7 @@ import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 public class API_Client {
         public static final String BASE_URL = "https://itdevelopmentservices.com/shamsha/apis/";
-        public static final String BASE_IMAGE_URL = "https://itdevelopmentservices.com/shamsha/assets/images/";
+        public static final String BASE_IMAGE_URL = "https://itdevelopmentservices.com/shamsha/";
         public static final String MINI_BASE_URL = "https://itdevelopmentservices.com/";
         public static final String SEMI_BASE_URL = "";
 

@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.shamsaha.R;
 import com.shamsaha.util.UtilFunction;
 import com.shamsaha.util.WebviewActivity;
+import com.shamsaha.victim.model.SSTDataEn;
 import com.shamsaha.victim.model.res.SSTRes;
 
 import java.util.ArrayList;
@@ -23,9 +24,9 @@ import java.util.List;
 public class ResourcesSST extends RecyclerView.Adapter<SSTViewHolder> {
 
     private Context context;
-    List<SSTRes> sstResList = new ArrayList<>();
+    List<SSTDataEn> sstResList = new ArrayList<>();
 
-    public ResourcesSST(Context context, List<SSTRes> sstResList) {
+    public ResourcesSST(Context context, List<SSTDataEn> sstResList) {
         this.context = context;
         this.sstResList = sstResList;
     }

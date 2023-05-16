@@ -94,7 +94,7 @@ public class PerCountryFragment extends Fragment {
             pd.setMessage("loading...");
             pd.show();
 
-            Call<ResourceCategoryModel> call = API_Client.getClient().RESOURCE_CATEGORY_MODEL_CALL(resourceSpinId);
+            Call<ResourceCategoryModel> call = API_Client.getClient().RESOURCE_CATEGORY_MODEL_CALL("en",resourceSpinId);
 
             call.enqueue(new Callback<ResourceCategoryModel>() {
                 @Override
@@ -190,7 +190,7 @@ public class PerCountryFragment extends Fragment {
         pd.setMessage("loading...");
         pd.show();
 
-        Call<ResourcesCountryModel> call = API_Client.getClient().RESOURCES_COUNTRY_MODEL_CALL();
+        Call<ResourcesCountryModel> call = API_Client.getClient().RESOURCES_COUNTRY_MODEL_CALL("en");
 
         call.enqueue(new Callback<ResourcesCountryModel>() {
             @Override

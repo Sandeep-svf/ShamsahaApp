@@ -21,14 +21,22 @@ import androidx.appcompat.widget.SwitchCompat;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.shamsaha.R;
+import com.shamsaha.retrofit.API_Client;
+import com.shamsaha.victim.model.res.AboutBoardMemberRes;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class AboutAdvisoryBoardAdapter extends RecyclerView.Adapter<AdvisoryBoardViewHolder> {
 
     private Context context;
+    List<AboutBoardMemberRes> aboutBoardMemberResList = new ArrayList<>();
 
-    public AboutAdvisoryBoardAdapter(Context context) {
+    public AboutAdvisoryBoardAdapter(Context context, List<AboutBoardMemberRes> aboutBoardMemberResList) {
         this.context = context;
+        this.aboutBoardMemberResList = aboutBoardMemberResList;
     }
 
     @NonNull
@@ -42,6 +50,16 @@ public class AboutAdvisoryBoardAdapter extends RecyclerView.Adapter<AdvisoryBoar
     @Override
     public void onBindViewHolder(@NonNull AdvisoryBoardViewHolder holder, int position) {
 
+
+        Glide.with(context)
+                .load(API_Client.BASE_IMAGE_URL+aboutBoardMemberResList.get(position).getImage())
+                .placeholder(R.drawable.ic_launcher_background)
+                .into(holder.image_board_member);
+
+        holder.name_board_member.setText(aboutBoardMemberResList.get(position).getBname());
+        holder.designation_board_member.setText(aboutBoardMemberResList.get(position).getDesignation());
+
+
         holder.item_view_about.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,7 +72,7 @@ public class AboutAdvisoryBoardAdapter extends RecyclerView.Adapter<AdvisoryBoar
 
     @Override
     public int getItemCount() {
-        return 45;
+        return aboutBoardMemberResList.size();
     }
 
 
@@ -90,10 +108,15 @@ public class AboutAdvisoryBoardAdapter extends RecyclerView.Adapter<AdvisoryBoar
 }
 class AdvisoryBoardViewHolder extends RecyclerView.ViewHolder{
 
+    AppCompatImageView image_board_member;
     CardView item_view_about;
+    AppCompatTextView name_board_member,designation_board_member;
 
     public AdvisoryBoardViewHolder(@NonNull View itemView) {
         super(itemView);
         item_view_about = itemView.findViewById(R.id.item_view_about);
+        image_board_member = itemView.findViewById(R.id.image_board_member);
+        name_board_member = itemView.findViewById(R.id.name_board_member);
+        designation_board_member = itemView.findViewById(R.id.designation_board_member);
     }
 }

@@ -20,7 +20,10 @@ import com.shamsaha.retrofit.API_Client;
 import com.shamsaha.victim.adapter.ResourcesPerCountryAdapter;
 import com.shamsaha.victim.adapter.ResourcesSST;
 import com.shamsaha.victim.model.HomeModel;
+import com.shamsaha.victim.model.SSTDataAr;
+import com.shamsaha.victim.model.SSTDataEn;
 import com.shamsaha.victim.model.SSTModel;
+import com.shamsaha.victim.model.SSTModelNew;
 import com.shamsaha.victim.model.res.HomeRes;
 import com.shamsaha.victim.model.res.SSTRes;
 
@@ -39,7 +42,8 @@ public class SurvivorSupportToolsFragment extends Fragment {
 
 
     FragmentSurvivorSupportToolsBinding binding;
-    List<SSTRes> sstResList = new ArrayList<>();
+    List<SSTDataEn> sstDataEnList = new ArrayList<>();
+    List<SSTDataAr> sstDataArList = new ArrayList<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -61,11 +65,11 @@ public class SurvivorSupportToolsFragment extends Fragment {
             pd.setMessage("loading...");
             pd.show();
 
-            Call<SSTModel> call = API_Client.getClient2().SST_MODEL_CALL();
+            Call<SSTModelNew> call = API_Client.getClient2().SST_MODEL_CALL();
 
-            call.enqueue(new Callback<SSTModel>() {
+            call.enqueue(new Callback<SSTModelNew>() {
                 @Override
-                public void onResponse(Call<SSTModel> call, Response<SSTModel> response) {
+                public void onResponse(Call<SSTModelNew> call, Response<SSTModelNew> response) {
                     pd.dismiss();
                     try {
                         //if api response is successful ,taking message and success
@@ -75,11 +79,13 @@ public class SurvivorSupportToolsFragment extends Fragment {
 
                             if (success.equals("true") || success.equals("True")) {
 
-                                sstResList = response.body().getData();
+
+                                sstDataEnList = response.body().getDataEn();
+                                sstDataArList = response.body().getDataAr();
                                 LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
                                 linearLayoutManager.setOrientation(RecyclerView.VERTICAL);
                                 binding.rcvSst.setLayoutManager(linearLayoutManager);
-                                ResourcesSST resourcesSST = new ResourcesSST(getActivity(),sstResList);
+                                ResourcesSST resourcesSST = new ResourcesSST(getActivity(),sstDataEnList);
                                 binding.rcvSst.setAdapter(resourcesSST);
 
                                 Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
@@ -132,7 +138,7 @@ public class SurvivorSupportToolsFragment extends Fragment {
                 }
 
                 @Override
-                public void onFailure(Call<SSTModel> call, Throwable t) {
+                public void onFailure(Call<SSTModelNew> call, Throwable t) {
                     Log.e("conversion issue", t.getMessage());
 
                     if (t instanceof IOException) {

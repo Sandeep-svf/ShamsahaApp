@@ -35,33 +35,7 @@ public class AboutViewModel extends ViewModel {
 
 
     public void getContent(){
-        Api api = API_Client.getClient().create(api.class);
-        Call<AboutModel> aboutCall = api.ABOUT_MODEL_CALL();
 
-        aboutCall.enqueue(new Callback<AboutModel>() {
-            @Override
-            public void onResponse(@NotNull Call<AboutModel> call, @NotNull Response<AboutModel> response) {
-                if (response.isSuccessful() && response.body()!= null){
-                   AboutModel dataAbout = response.body();
-                   /* for (AboutModel about : dataAbout){
-                        if (baseURL.LANGUAGE_CODE.equalsIgnoreCase("en")) {
-                            mutableLiveDataContent.postValue(about.getContentEn());
-                        }else {
-                            mutableLiveDataContent.postValue(about.getContentAr());
-                        }
-                    }*/
-                    AboutRes aboutRes = dataAbout.getData();
-
-                }
-            }
-
-            @Override
-            public void onFailure(Call<AboutModel> call, Throwable t) {
-
-            }
-
-
-        });
     }
 
 

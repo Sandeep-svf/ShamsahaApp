@@ -1,5 +1,6 @@
 package com.shamsaha.victim.adapter;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,9 +41,11 @@ public class ResourcesPerCountryAdapter extends RecyclerView.Adapter<PerCountryV
     public void onBindViewHolder(@NonNull PerCountryViewHolder holder, int position) {
 
         holder.cat_name.setText( resourcesCaregoryResList.get(position).getCategoryName());
-        Glide.with(context).load(API_Client.BASE_IMAGE_URL+resourcesCaregoryResList.get(position).getCategoryIcon())
-                .placeholder(R.drawable.logo)
+        Glide.with(context).load(resourcesCaregoryResList.get(position).getCategoryIcon())
+                .placeholder(R.drawable.ic_launcher_background)
                 .into(holder.cat_icon);
+
+        Log.e("test_sam_resources",resourcesCaregoryResList.get(position).getCategoryIcon());
 
         holder.item_per_country_layout.setOnClickListener(new View.OnClickListener() {
             @Override
