@@ -52,7 +52,7 @@ public class AboutAdvisoryBoardAdapter extends RecyclerView.Adapter<AdvisoryBoar
 
 
         Glide.with(context)
-                .load(API_Client.BASE_IMAGE_URL+aboutBoardMemberResList.get(position).getImage())
+                .load(aboutBoardMemberResList.get(position).getImage())
                 .placeholder(R.drawable.ic_launcher_background)
                 .into(holder.image_board_member);
 

@@ -95,7 +95,7 @@ public class ContactUsFragment extends Fragment {
                                 ContactUsDataRes contactUsDataRes = contactUsDataModel.getData();
 
                                 Glide.with(getActivity())
-                                        .load(API_Client.BASE_IMAGE_URL+contactUsDataRes.getImage())
+                                        .load(contactUsDataRes.getImage())
                                         .placeholder(R.drawable.ic_launcher_background)
                                         .into(binding.imageContactUs);
                                 binding.textView4.setText(contactUsDataRes.getContent());

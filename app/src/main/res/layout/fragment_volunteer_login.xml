@@ -201,8 +201,9 @@
                 android:background="@null"
                 android:fontFamily="@font/avenir_heavy"
                 android:hint="@string/email"
+                android:id="@+id/emailVolLogin"
                 android:inputType="textEmailAddress"
-                android:textColor="@color/white"
+
                 app:layout_constraintStart_toEndOf="@+id/sl934893"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintWidth_percent="0.875"
@@ -258,8 +259,9 @@
                 android:background="@null"
                 android:fontFamily="@font/avenir_heavy"
                 android:hint="@string/password"
+                android:id="@+id/password_vol_login"
                 android:inputType="textPassword"
-                android:textColor="@color/white"
+
                 app:layout_constraintStart_toEndOf="@+id/sl9348"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintWidth_percent="0.875"
@@ -342,7 +344,7 @@
         <View
             android:id="@+id/line_1"
             android:layout_width="match_parent"
-            android:layout_height="2dp"
+            android:layout_height="1dp"
             android:background="@drawable/custom_line_vol_login"
             app:layout_constraintBottom_toTopOf="@+id/sl64287"
             app:layout_constraintEnd_toEndOf="parent"
@@ -431,7 +433,7 @@
         <View
             android:id="@+id/line_2"
             android:layout_width="match_parent"
-            android:layout_height="2dp"
+            android:layout_height="1dp"
             android:background="@drawable/custom_line_vol_login"
             app:layout_constraintBottom_toTopOf="@+id/sl64287dsd"
             app:layout_constraintEnd_toEndOf="parent"

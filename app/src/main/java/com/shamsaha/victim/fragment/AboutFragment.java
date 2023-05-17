@@ -208,13 +208,13 @@ public class AboutFragment extends Fragment {
                                 AboutRes aboutRes = aboutModel.getData();
 
                                 Glide.with(getActivity())
-                                        .load(API_Client.BASE_IMAGE_URL+aboutRes.getImage1())
+                                        .load(aboutRes.getImage1())
                                         .placeholder(R.drawable.ic_launcher_background)
                                         .into(binding.DirectorImageView);
 
 
                                 Glide.with(getActivity())
-                                        .load(API_Client.BASE_IMAGE_URL+aboutRes.getImage2())
+                                        .load(aboutRes.getImage2())
                                         .placeholder(R.drawable.ic_launcher_background)
                                         .into(binding.FounderImageView);
 
