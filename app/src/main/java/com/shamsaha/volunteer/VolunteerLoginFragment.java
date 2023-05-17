@@ -1,5 +1,6 @@
 package com.shamsaha.volunteer;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -17,11 +18,16 @@ import com.shamsaha.util.UtilFunction;
 import com.shamsaha.victim.viewmodel.VolunteerLoginBody;
 import com.shamsaha.victim.viewmodel.VolunteerLoginViewModel;
 
+import java.util.HashMap;
+import java.util.Map;
+
 
 public class VolunteerLoginFragment extends Fragment {
 
     private FragmentVolunteerLoginBinding binding;
     private VolunteerLoginViewModel viewModel;
+    private Context context;
+    Map<String,String> params;
 
 
     @Override
@@ -35,7 +41,8 @@ public class VolunteerLoginFragment extends Fragment {
             public void onClick(View v) {
                 if (validation()) {
 
-                    viewModel.getUser(binding.emailVolLogin.getText().toString(),binding.passwordVolLogin.getText().toString()).observe((getActivity()), userLiveData-> {
+                    get_data();
+                    viewModel.getUser(params,getActivity()).observe(getActivity(), userLiveData-> {
 
                         String success = userLiveData.getSuccess();
                         String message = userLiveData.getMessage();
@@ -55,6 +62,11 @@ public class VolunteerLoginFragment extends Fragment {
         return binding.getRoot();
     }
 
+    private void get_data() {
+        params = new HashMap<String, String>();
+        params.put("email", binding.emailVolLogin.getText().toString());
+        params.put("password", binding.passwordVolLogin.getText().toString());
+    }
 
 
     private boolean validation() {

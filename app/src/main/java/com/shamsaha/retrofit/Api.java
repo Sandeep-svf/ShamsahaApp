@@ -13,9 +13,12 @@ import com.shamsaha.victim.model.SSTModelNew;
 import com.shamsaha.victim.model.VolunteerLoginModel;
 import com.shamsaha.victim.viewmodel.VolunteerLoginBody;
 
+import java.util.Map;
+
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.Field;
+import retrofit2.http.FieldMap;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
@@ -41,8 +44,9 @@ public interface Api {
                                                     @Field("email") String email,
                                                     @Field("message") String message);
 
+    @FormUrlEncoded
     @POST("Contactus")
-    Call<ContactUsDataModel> CONTACT_US_DATA_CALL ();
+    Call<ContactUsDataModel> CONTACT_US_DATA_CALL (@Field("language") String language);
 
     @GET("shamsha/core_script/survivor_tools.php")
     Call<SSTModelNew> SST_MODEL_CALL();
@@ -62,7 +66,6 @@ public interface Api {
 
     @FormUrlEncoded
     @POST("volunteer_login")
-    Call<VolunteerLoginModel> VOLUNTEER_LOGIN_MODEL_CALL(@Field("email") String email,
-                                                         @Field("password") String password);
+    Call<VolunteerLoginModel> VOLUNTEER_LOGIN_MODEL_CALL(@FieldMap Map<String, String> params);
 
 }

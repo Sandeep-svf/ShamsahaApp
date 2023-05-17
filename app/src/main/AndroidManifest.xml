@@ -2,6 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.shamsaha">
 
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,6 +17,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ShamsahaApp">
+        <activity
+            android:name=".volunteer.DashboardVol"
+            android:exported="true" />
+        <receiver
+            android:name=".retrofit.Restarter"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="restartservice" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name=".retrofit.LocationService"
+            android:enabled="true"
+            android:stopWithTask="false">
+        </service>
+        <service
+            android:name=".retrofit.YourService"
+            android:stopWithTask="false">
+        </service>
         <activity
             android:name=".util.WebviewActivity"
             android:exported="true" />
@@ -24,6 +52,8 @@
         <activity
             android:name=".victim.DashboardVictimActivity"
             android:exported="true" />
+
+
     </application>
 
 </manifest>

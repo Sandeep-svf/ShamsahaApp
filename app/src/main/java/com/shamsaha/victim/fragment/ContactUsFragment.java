@@ -77,7 +77,7 @@ public class ContactUsFragment extends Fragment {
             pd.setMessage("loading...");
             pd.show();
 
-            Call<ContactUsDataModel> call = API_Client.getClient().CONTACT_US_DATA_CALL();
+            Call<ContactUsDataModel> call = API_Client.getClient().CONTACT_US_DATA_CALL("en");
 
             call.enqueue(new Callback<ContactUsDataModel>() {
                 @Override
@@ -101,6 +101,9 @@ public class ContactUsFragment extends Fragment {
                                 binding.textView4.setText(contactUsDataRes.getContent());
                                 binding.addressContactUs.setText(contactUsDataRes.getAddress());
                                 locationUrl = contactUsDataRes.getGoogleMap();
+
+                                Log.e("test_sam",contactUsDataRes.getImage());
+                                Log.e("test_sam",contactUsDataRes.getGoogleMap());
 
                                 Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
                             } else {
@@ -178,8 +181,7 @@ public class ContactUsFragment extends Fragment {
                     binding.nameContactUs.getText().toString(),
                     binding.phoneContactUs.getText().toString(),
                     binding.emailContactUs.getText().toString(),
-                    binding.messageContactUs.getText().toString()
-            );
+                    binding.messageContactUs.getText().toString());
 
             call.enqueue(new Callback<CommonModel>() {
                 @Override

@@ -21,11 +21,7 @@ public class ChatFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding = FragmentChatBinding.inflate(inflater, container, false);
-        View view = binding.getRoot();
 
-
-
-
-        return view;
+        return binding.getRoot();
     }
 }

@@ -70,6 +70,7 @@
                     android:layout_weight="1">
 
                     <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/home_image_victim"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:scaleType="centerCrop"
@@ -80,7 +81,7 @@
 
                         app:layout_constraintHeight_percent="0.55"
                         app:layout_constraintWidth_percent="0.35"
-                        android:src="@drawable/home2"
+                        android:src="@drawable/home_f"
 
                         ></androidx.appcompat.widget.AppCompatImageView>
 
@@ -93,6 +94,7 @@
                     android:layout_weight="1">
 
                     <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/volunteer_image_victim"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         app:layout_constraintStart_toStartOf="parent"
@@ -102,7 +104,7 @@
                         android:scaleType="centerCrop"
                         app:layout_constraintHeight_percent="0.55"
                         app:layout_constraintWidth_percent="0.35"
-                        android:src="@drawable/profile_icon"
+                        android:src="@drawable/volunteer_f"
 
                         ></androidx.appcompat.widget.AppCompatImageView>
 
@@ -119,6 +121,7 @@
                     <androidx.appcompat.widget.AppCompatImageView
                         android:layout_width="0dp"
                         android:layout_height="0dp"
+                        android:id="@+id/chat_image_victim"
 
                         app:layout_constraintVertical_bias="0.25"
                         app:layout_constraintStart_toStartOf="parent"
@@ -128,7 +131,7 @@
                         android:scaleType="fitXY"
                         app:layout_constraintHeight_percent="0.65"
                         app:layout_constraintWidth_percent="0.45"
-                        android:src="@drawable/chat"
+                        android:src="@drawable/chat_f"
 
                         ></androidx.appcompat.widget.AppCompatImageView>
 
@@ -143,6 +146,7 @@
                     <androidx.appcompat.widget.AppCompatImageView
                         android:layout_width="0dp"
                         android:layout_height="0dp"
+                        android:id="@+id/resource_image_victim"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
@@ -150,7 +154,7 @@
                         android:scaleType="centerCrop"
                         app:layout_constraintHeight_percent="0.55"
                         app:layout_constraintWidth_percent="0.35"
-                        android:src="@drawable/resource2"
+                        android:src="@drawable/resources_f"
 
                         ></androidx.appcompat.widget.AppCompatImageView>
 
@@ -166,7 +170,8 @@
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/menu2"
+                        android:id="@+id/menu_image_victim"
+                        android:src="@drawable/menu_f"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHeight_percent="0.55"

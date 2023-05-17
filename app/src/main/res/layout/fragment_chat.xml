@@ -123,7 +123,7 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintWidth_percent="0.2">
 
-                        <ImageView
+                        <androidx.appcompat.widget.AppCompatImageView
                             android:id="@+id/imageView4"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
@@ -136,7 +136,7 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            tools:src="@drawable/chat" />
+                            tools:src="@drawable/chat_f" />
 
                         <TextView
                             android:id="@+id/textView2"
@@ -251,7 +251,7 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            tools:src="@drawable/internet_call" />
+                            tools:src="@drawable/ic_launcher_background" />
 
                         <TextView
                             android:id="@+id/textView2_internet_call"
@@ -366,7 +366,7 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            tools:src="@drawable/celluler_call" />
+                            tools:src="@drawable/call_f" />
 
                         <TextView
                             android:id="@+id/textView2_celluler_call"
