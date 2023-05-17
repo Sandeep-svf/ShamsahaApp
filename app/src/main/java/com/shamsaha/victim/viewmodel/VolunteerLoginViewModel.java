@@ -1,16 +1,12 @@
 package com.shamsaha.victim.viewmodel;
-
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
-
 import com.shamsaha.retrofit.API_Client;
 import com.shamsaha.retrofit.Api;
 import com.shamsaha.victim.model.VolunteerLoginModel;
 import com.shamsaha.victim.model.res.VolunteerLoginRes;
-
 import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -36,7 +32,7 @@ public class VolunteerLoginViewModel extends ViewModel {
 
         Api apiService = retrofit.create(Api.class);
 
-        Call<VolunteerLoginModel> call = apiService.VOLUNTEER_LOGIN_MODEL_CALL("caseworker@shamsaha.org","123456");
+        Call<VolunteerLoginModel> call = apiService.VOLUNTEER_LOGIN_MODEL_CALL(email,password);
         call.enqueue(new Callback<VolunteerLoginModel>() {
             @Override
             public void onResponse(Call<VolunteerLoginModel> call, Response<VolunteerLoginModel> response) {

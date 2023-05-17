@@ -11,8 +11,10 @@ import com.shamsaha.victim.model.ResourcesCountryModel;
 import com.shamsaha.victim.model.SSTModel;
 import com.shamsaha.victim.model.SSTModelNew;
 import com.shamsaha.victim.model.VolunteerLoginModel;
+import com.shamsaha.victim.viewmodel.VolunteerLoginBody;
 
 import retrofit2.Call;
+import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
@@ -60,7 +62,7 @@ public interface Api {
 
     @FormUrlEncoded
     @POST("volunteer_login")
-    Call<VolunteerLoginModel> VOLUNTEER_LOGIN_MODEL_CALL( @Field("email") String email,
-                                                          @Field("password") String password);
+    Call<VolunteerLoginModel> VOLUNTEER_LOGIN_MODEL_CALL(@Field("email") String email,
+                                                         @Field("password") String password);
 
 }

@@ -1,5 +1,6 @@
 package com.shamsaha.volunteer;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -13,6 +14,7 @@ import android.widget.Toast;
 import com.shamsaha.R;
 import com.shamsaha.databinding.FragmentVolunteerLoginBinding;
 import com.shamsaha.util.UtilFunction;
+import com.shamsaha.victim.viewmodel.VolunteerLoginBody;
 import com.shamsaha.victim.viewmodel.VolunteerLoginViewModel;
 
 
@@ -20,6 +22,7 @@ public class VolunteerLoginFragment extends Fragment {
 
     private FragmentVolunteerLoginBinding binding;
     private VolunteerLoginViewModel viewModel;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -31,12 +34,15 @@ public class VolunteerLoginFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if (validation()) {
+
                     viewModel.getUser(binding.emailVolLogin.getText().toString(),binding.passwordVolLogin.getText().toString()).observe((getActivity()), userLiveData-> {
 
                         String success = userLiveData.getSuccess();
                         String message = userLiveData.getMessage();
                         if(success.equalsIgnoreCase("true")){
                             Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(getActivity(),DashboardVol.class);
+                            startActivity(intent);
                         }else{
                             Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
                         }
@@ -48,6 +54,8 @@ public class VolunteerLoginFragment extends Fragment {
 
         return binding.getRoot();
     }
+
+
 
     private boolean validation() {
         if(binding.emailVolLogin.getText().toString().equals("")){
