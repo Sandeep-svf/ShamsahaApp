@@ -36,6 +36,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:text="Hospital"
+                app:fontFamily="@font/avenir_heavy"
                 android:textSize="@dimen/text_heading_ultra_18sp"
                 android:textColor="@color/purple_them"
 
@@ -81,7 +82,7 @@
             ></de.hdodenhof.circleimageview.CircleImageView>
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/cat_icon"
+            android:id="@+id/cat_icon3"
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:civ_border_color="@color/white"
@@ -91,12 +92,32 @@
 
             app:civ_circle_background_color="@color/white"
             app:layout_constraintHorizontal_bias="0.05"
-            android:src="@drawable/ic_launcher_background"
+            android:src="@color/pick_them"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             ></de.hdodenhof.circleimageview.CircleImageView>
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/cat_icon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:tint="@color/white"
+            app:civ_border_color="@color/white"
+            app:layout_constraintHeight_percent="0.59"
+            app:layout_constraintWidth_percent="0.59"
+            app:civ_border_width="2dp"
+
+            app:civ_circle_background_color="@color/white"
+            app:layout_constraintHorizontal_bias="0.5"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            ></androidx.appcompat.widget.AppCompatImageView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

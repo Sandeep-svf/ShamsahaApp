@@ -64,7 +64,7 @@ public class AboutAdvisoryBoardAdapter extends RecyclerView.Adapter<AdvisoryBoar
             @Override
             public void onClick(View view) {
                 // popup
-                alert_dialog_message();
+
             }
         });
 

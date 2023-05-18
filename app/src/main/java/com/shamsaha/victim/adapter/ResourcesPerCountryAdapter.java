@@ -5,8 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.cardview.widget.CardView;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -50,6 +52,8 @@ public class ResourcesPerCountryAdapter extends RecyclerView.Adapter<PerCountryV
         holder.item_per_country_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+               // holder.cat_icon.setColorFilter(ContextCompat.getColor(context, R.color.pick_them), android.graphics.PorterDuff.Mode.MULTIPLY);
+              //  holder.cat_icon3.setBackgroundResource(R.color.white);
 
             }
         });
@@ -65,11 +69,13 @@ class PerCountryViewHolder extends RecyclerView.ViewHolder{
 
     CardView item_per_country_layout;
     AppCompatTextView cat_name;
-    CircleImageView cat_icon;
+    AppCompatImageView cat_icon;
+    CircleImageView cat_icon3;
     public PerCountryViewHolder(@NonNull View itemView) {
         super(itemView);
         item_per_country_layout = itemView.findViewById(R.id.item_per_country_layout);
         cat_name = itemView.findViewById(R.id.cat_name);
         cat_icon = itemView.findViewById(R.id.cat_icon);
+        cat_icon3 = itemView.findViewById(R.id.cat_icon3);
     }
 }

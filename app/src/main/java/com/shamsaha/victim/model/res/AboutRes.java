@@ -7,6 +7,14 @@ import com.google.gson.annotations.SerializedName;
 
 public class AboutRes {
 
+    @SerializedName("content4")
+    private String content4;
+    @SerializedName("content3")
+    private String content3;
+    @SerializedName("content2")
+    private String content2;
+    @SerializedName("content1")
+    private String content1;
     @SerializedName("about1")
     private String mAbout1;
     @SerializedName("about2")
@@ -31,6 +39,22 @@ public class AboutRes {
     private String mTag2;
     @SerializedName("title")
     private String mTitle;
+
+    public String getContent4() {
+        return content4;
+    }
+
+    public String getContent3() {
+        return content3;
+    }
+
+    public String getContent2() {
+        return content2;
+    }
+
+    public String getContent1() {
+        return content1;
+    }
 
     public String getAbout1() {
         return mAbout1;

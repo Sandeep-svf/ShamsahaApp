@@ -15,7 +15,6 @@ import android.widget.Toast;
 import com.shamsaha.R;
 import com.shamsaha.databinding.FragmentVolunteerLoginBinding;
 import com.shamsaha.util.UtilFunction;
-import com.shamsaha.victim.viewmodel.VolunteerLoginBody;
 import com.shamsaha.victim.viewmodel.VolunteerLoginViewModel;
 
 import java.util.HashMap;

@@ -17,6 +17,7 @@
             android:layout_height="match_parent">
             
             <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent">
@@ -42,13 +43,13 @@
                             <androidx.appcompat.widget.AppCompatImageView
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
-                                android:src="@drawable/ic_launcher_background"
+                                android:src="@drawable/left_arrow_white"
                                 app:layout_constraintTop_toTopOf="parent"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 android:layout_marginStart="20dp"
-                                app:layout_constraintHeight_percent="0.75"
-                                app:layout_constraintWidth_percent="0.1"
+                                app:layout_constraintHeight_percent="0.4"
+                                app:layout_constraintWidth_percent="0.125"
                                 >
 
 
@@ -56,14 +57,14 @@
                             <androidx.appcompat.widget.AppCompatImageView
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
-                                android:src="@drawable/ic_launcher_background"
+                                android:src="@drawable/logo"
                                 app:layout_constraintTop_toTopOf="parent"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 android:layout_marginStart="20dp"
-                                app:layout_constraintWidth_percent="0.5"
-                                app:layout_constraintHeight_percent="0.75"
-                                android:scaleType="centerCrop"
+                                app:layout_constraintWidth_percent="0.55"
+                                app:layout_constraintHeight_percent="0.65"
+                                android:scaleType="fitXY"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 >
 
@@ -192,6 +193,24 @@
                                     app:layout_constraintHeight_percent="0.45"
                                     >
 
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/info1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        app:layout_constraintWidth_percent="0.07"
+                                        app:layout_constraintHeight_percent="0.25"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        android:src="@drawable/info_f_yellow"
+                                        app:layout_constraintHorizontal_bias="0.95"
+                                        app:layout_constraintVertical_bias="0.9"
+
+
+                                        ></androidx.appcompat.widget.AppCompatImageView>
+
                                     <com.google.android.material.imageview.ShapeableImageView
                                         android:id="@+id/Director_image_view"
                                         android:layout_width="0dp"
@@ -238,11 +257,12 @@
                                         android:fontFamily="@font/avenir_heavy"
                                         ></androidx.appcompat.widget.AppCompatTextView>
                                     <androidx.appcompat.widget.AppCompatTextView
-
+                                        android:id="@+id/designation_description"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+
                                         app:layout_constraintTop_toBottomOf="@+id/designation_name"
-                                       app:layout_constraintStart_toStartOf="@+id/designation_name"
+                                        app:layout_constraintStart_toStartOf="@+id/designation_name"
 
 
                                         android:text="Shamsaha founder and excutive director"
@@ -254,6 +274,7 @@
                                 <androidx.constraintlayout.widget.ConstraintLayout
                                     android:layout_width="0dp"
                                     android:layout_height="0dp"
+                                    android:layout_marginBottom="5dp"
                                     app:layout_constraintWidth_percent="0.95"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintVertical_bias="0.95"
@@ -265,7 +286,22 @@
                                     >
 
 
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/info2"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        app:layout_constraintWidth_percent="0.07"
+                                        app:layout_constraintHeight_percent="0.25"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        android:src="@drawable/info_f_yellow"
+                                        app:layout_constraintHorizontal_bias="0.95"
+                                        app:layout_constraintVertical_bias="0.9"
 
+
+                                        ></androidx.appcompat.widget.AppCompatImageView>
 
                                     <com.google.android.material.imageview.ShapeableImageView
                                         android:id="@+id/Founder_image_view"
@@ -313,7 +349,7 @@
                                         android:fontFamily="@font/avenir_heavy"
                                         ></androidx.appcompat.widget.AppCompatTextView>
                                     <androidx.appcompat.widget.AppCompatTextView
-
+                                        android:id="@+id/designation_description2"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         app:layout_constraintTop_toBottomOf="@+id/designation_name2"
@@ -374,13 +410,14 @@
                         android:textColor="@color/white"
                         android:textSize="@dimen/text_heading_super_ultra_24sp"
                         android:fontFamily="@font/avenir_heavy"
-                        android:layout_margin="10dp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
 
 
+
                         ></androidx.appcompat.widget.AppCompatTextView>
+
 
 
                     <androidx.recyclerview.widget.RecyclerView

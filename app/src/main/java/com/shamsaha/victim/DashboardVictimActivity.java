@@ -1,6 +1,7 @@
 package com.shamsaha.victim;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -51,11 +52,12 @@ public class DashboardVictimActivity extends AppCompatActivity {
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main);
         set_animation();
 
-        mYourService = new YourService();
+        // calling services...
+       /* mYourService = new YourService();
         mServiceIntent = new Intent(this, mYourService.getClass());
         if (!isMyServiceRunning(mYourService.getClass())) {
             startService(mServiceIntent);
-        }
+        }*/
 
 
         binding.homeVictimLayout.setOnClickListener(new View.OnClickListener() {
@@ -219,9 +221,9 @@ public class DashboardVictimActivity extends AppCompatActivity {
 
     private void replace_fragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
-        //((ConstraintLayout) findViewById(R.id.container)).removeAllViews();
+        ((ConstraintLayout) findViewById(R.id.container)).removeAllViews();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        //fragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left, R.anim.enter_from_left, R.anim.exit_to_right);
+        fragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left, R.anim.enter_from_left, R.anim.exit_to_right);
         fragmentTransaction.add(R.id.container, fragment);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();

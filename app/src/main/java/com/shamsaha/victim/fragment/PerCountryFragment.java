@@ -62,9 +62,10 @@ public class PerCountryFragment extends Fragment {
                 //  Toast.makeText(getActivity(), "Country Spinner Working **********", Toast.LENGTH_SHORT).show();
 
                 String item = binding.spinPerCountry.getSelectedItem().toString();
-                if (item.equals(getResources().getString(R.string.select_resources)))
+                if (item.equals(resourcesCountryResList.get(0).getLocationName()))
                 {
-
+                    resourceSpinId = String.valueOf(resourcesCountryResList.get(0).getWcrid());
+                    resources_location_api();
                     // int spinnerPosition = dAdapter.getPosition(compareValue);
                     // spinner_category.setSelection(Integer.parseInt("Select Category"));
                 }   else
@@ -216,7 +217,7 @@ public class PerCountryFragment extends Fragment {
                             spinnerAdapter dAdapter = new spinnerAdapter(getActivity(), R.layout.custom_spinner_two, spinResourceList);
                             dAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                             dAdapter.addAll(spinResourceList);
-                            dAdapter.add(getResources().getString(R.string.select_resources));
+                            dAdapter.add(resourcesCountryResList.get(0).getLocationName());
                             binding.spinPerCountry.setAdapter(dAdapter);
                             binding.spinPerCountry.setSelection(dAdapter.getCount());
 
