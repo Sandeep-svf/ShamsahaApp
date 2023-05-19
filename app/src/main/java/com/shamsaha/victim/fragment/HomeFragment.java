@@ -78,7 +78,7 @@ public class HomeFragment extends Fragment {
                                 binding.textView12.setText(homeRes.getHeading2());
                                 binding.textView13.setText(homeRes.getContent2());
 
-                                Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
+                             //   Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
 
                             } else {
 

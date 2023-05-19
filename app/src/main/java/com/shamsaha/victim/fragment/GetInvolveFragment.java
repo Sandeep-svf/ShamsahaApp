@@ -55,7 +55,7 @@ public class GetInvolveFragment extends Fragment {
                         .into(binding.image1);
 
 
-                Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
 
             } else {
                 Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();

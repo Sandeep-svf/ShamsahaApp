@@ -50,7 +50,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 tools:layout_editor_absoluteX="143dp"
                 tools:layout_editor_absoluteY="16dp"
-                tools:src="@drawable/logo" />
+                android:src="@drawable/logo" />
 
             <TextView
                 android:id="@+id/textView"
@@ -80,6 +80,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="0dp"
                 android:layout_height="0dp"
+                android:visibility="gone"
                 app:layout_constraintWidth_percent="0.9"
                 app:layout_constraintHeight_percent="0.8"
                 android:background="@drawable/custom_card_view_radious_chat"
@@ -136,7 +137,7 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            tools:src="@drawable/chat_f" />
+                            android:src="@drawable/chat_f" />
 
                         <TextView
                             android:id="@+id/textView2"
@@ -194,6 +195,7 @@
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="0dp"
+                android:visibility="gone"
                 android:layout_height="0dp"
                 app:layout_constraintWidth_percent="0.9"
                 app:layout_constraintHeight_percent="0.8"
@@ -251,7 +253,7 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            tools:src="@drawable/ic_launcher_background" />
+                            android:src="@drawable/internet_call" />
 
                         <TextView
                             android:id="@+id/textView2_internet_call"
@@ -309,6 +311,7 @@
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout5">
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="0dp"
+                android:visibility="gone"
                 android:layout_height="0dp"
                 app:layout_constraintWidth_percent="0.9"
                 app:layout_constraintHeight_percent="0.8"
@@ -366,7 +369,7 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            tools:src="@drawable/call_f" />
+                            android:src="@drawable/call_f" />
 
                         <TextView
                             android:id="@+id/textView2_celluler_call"

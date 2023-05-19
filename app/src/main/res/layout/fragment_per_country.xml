@@ -17,6 +17,7 @@
             android:id="@+id/spin_per_country"
             android:layout_width="match_parent"
             android:layout_height="36dp"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.AppCompatSpinner>
