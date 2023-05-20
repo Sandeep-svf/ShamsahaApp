@@ -33,7 +33,7 @@
         <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/layout/fragment_chat.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/layout/fragment_contact_us.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/layout/fragment_event_media.xml" value="0.22447916666666667" />
-        <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/layout/fragment_get_involve.xml" value="0.2" />
+        <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/layout/fragment_get_involve.xml" value="0.18" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/layout/fragment_home.xml" value="0.22" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/layout/fragment_lock_app.xml" value="0.25" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/layout/fragment_per_country.xml" value="0.1953125" />
@@ -54,5 +54,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.75" />
+      </ProjectState>
+    </option>
   </component>
 </project>

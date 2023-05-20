@@ -52,7 +52,7 @@
                 app:layout_constraintWidth_percent="0.1"
                 app:layout_constraintVertical_bias="0.25"
                 app:layout_constraintHorizontal_bias="0.075"
-                android:src="@drawable/arrow_left1"
+                android:src="@drawable/left_arrow_white"
                 android:scaleType="fitXY"
 
                 app:layout_constraintBottom_toBottomOf="@+id/logo_contact_us"
@@ -87,6 +87,7 @@
         <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:visibility="gone"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -111,24 +112,43 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.9"
+            app:layout_constraintVertical_bias="0.75"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintHeight_percent="0.75"
+            app:layout_constraintHeight_percent="0.7"
 
             >
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/klksdflfdg"
+        android:layout_width="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.01"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16"
+        app:layout_constraintHeight_percent="0.15"
+        app:layout_constraintWidth_percent="0.25"
+        android:src="@drawable/ic_launcher_background"
+
+
+
+
+        ></de.hdodenhof.circleimageview.CircleImageView>
+
     <TextView
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/amplify_your"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/klksdflfdg"
+
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintVertical_bias="0.2"
         app:layout_constraintHorizontal_bias="0.4"
         android:textColor="@color/pick_them"
         android:elevation="1dp"
@@ -138,6 +158,7 @@
 
 
     <TextView
+        android:visibility="gone"
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -269,6 +290,20 @@
 
                 ></androidx.appcompat.widget.AppCompatEditText>
 
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintVertical_bias="0.1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintWidth_percent="0.075"
+                app:layout_constraintHeight_percent="0.5"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_launcher_background"
+                ></androidx.appcompat.widget.AppCompatImageView>
+
             <View
                 android:layout_width="0dp"
                 android:layout_height="1dp"
@@ -343,6 +378,7 @@
 
         <View
             android:id="@+id/line_1"
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@drawable/custom_line_vol_login"
@@ -353,6 +389,7 @@
             app:layout_constraintTop_toBottomOf="@+id/login_vol"></View>
 
         <androidx.appcompat.widget.AppCompatTextView
+            android:visibility="gone"
             android:id="@+id/sl64287"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -369,6 +406,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/social_media_layout"
             android:layout_width="0dp"
+            android:visibility="gone"
             android:layout_height="40dp"
             app:layout_constraintBottom_toTopOf="@+id/line_2"
             app:layout_constraintEnd_toEndOf="parent"
@@ -431,6 +469,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <View
+            android:visibility="gone"
             android:id="@+id/line_2"
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -448,13 +487,28 @@
             android:fontFamily="@font/avenir_heavy"
             android:text="@string/new_user"
             app:fontFamily="@font/avenir_heavy"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/sfdsgfdsg"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
 
             app:layout_constraintTop_toBottomOf="@+id/line_2"
             app:layout_constraintWidth_percent="0.9"></androidx.appcompat.widget.AppCompatTextView>
+
+
+        <View
+            android:id="@+id/sfdsgfdsg"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHeight_percent="0.2"
+
+            app:layout_constraintTop_toBottomOf="@+id/sl64287dsd"
+
+            ></View>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

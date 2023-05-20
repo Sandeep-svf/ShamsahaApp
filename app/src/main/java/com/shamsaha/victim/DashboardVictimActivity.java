@@ -25,6 +25,7 @@ import android.widget.PopupWindow;
 import com.shamsaha.R;
 import com.shamsaha.databinding.ActivityMainBinding;
 
+import com.shamsaha.retrofit.LocationService;
 import com.shamsaha.retrofit.Restarter;
 import com.shamsaha.retrofit.YourService;
 import com.shamsaha.util.ImageUtils;
@@ -45,6 +46,7 @@ public class DashboardVictimActivity extends AppCompatActivity {
     Boolean menuFlag = false;
 
     private YourService mYourService;
+
     Intent mServiceIntent;
 
     @Override
@@ -59,7 +61,7 @@ public class DashboardVictimActivity extends AppCompatActivity {
 
 
         // calling services...
-       /* mYourService = new YourService();
+      /*  mYourService = new YourService();
         mServiceIntent = new Intent(this, mYourService.getClass());
         if (!isMyServiceRunning(mYourService.getClass())) {
             startService(mServiceIntent);

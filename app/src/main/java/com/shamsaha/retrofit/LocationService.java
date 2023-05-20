@@ -39,6 +39,8 @@ public class LocationService extends Service {
     public void onDestroy() {
         super.onDestroy();
         stopLocationUpdates();
+        Log.e("test_sam","On Destroyed calling...");
+
     }
 
     @Nullable

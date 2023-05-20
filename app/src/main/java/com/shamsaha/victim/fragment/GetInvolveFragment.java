@@ -34,6 +34,30 @@ public class GetInvolveFragment extends Fragment {
 
         get_involed_view_model_call();
 
+        binding.takeActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //
+
+                Toast.makeText(getActivity(), "Pressed...", Toast.LENGTH_SHORT).show();
+            }
+        });
+        binding.valunteerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getActivity(), "Pressed...", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+        binding.empGiftButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getActivity(), "Pressed...", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
             return binding.getRoot();
     }
 
