@@ -30,7 +30,7 @@ public class EventMediaArticleAdapter extends RecyclerView.Adapter<ArticleViewHo
 
     @Override
     public int getItemCount() {
-        return 0;
+        return 20;
     }
 }
 class ArticleViewHolder extends RecyclerView.ViewHolder{

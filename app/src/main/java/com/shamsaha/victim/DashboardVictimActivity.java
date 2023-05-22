@@ -32,6 +32,7 @@ import com.shamsaha.util.ImageUtils;
 import com.shamsaha.victim.fragment.AboutFragment;
 import com.shamsaha.victim.fragment.ChatFragment;
 import com.shamsaha.victim.fragment.ContactUsFragment;
+import com.shamsaha.victim.fragment.EventFragment;
 import com.shamsaha.victim.fragment.EventMediaFragment;
 import com.shamsaha.victim.fragment.GetInvolveFragment;
 import com.shamsaha.victim.fragment.HomeFragment;
@@ -44,9 +45,7 @@ public class DashboardVictimActivity extends AppCompatActivity {
     ActivityMainBinding binding;
     Animation animFadeIn, animSlideIn, animSlideInTop,animMoveUp,animMoveDown;
     Boolean menuFlag = false;
-
     private YourService mYourService;
-
     Intent mServiceIntent;
 
     @Override
@@ -58,6 +57,7 @@ public class DashboardVictimActivity extends AppCompatActivity {
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
         StrictMode.setVmPolicy(builder.build());
         getSupportFragmentManager().beginTransaction().replace(R.id.container, new HomeFragment()).commit();
+
 
 
         // calling services...
@@ -127,6 +127,9 @@ public class DashboardVictimActivity extends AppCompatActivity {
                 menuFlag = false;
             }
         });
+
+
+
         binding.aboutShamsahaMenuLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -158,6 +161,17 @@ public class DashboardVictimActivity extends AppCompatActivity {
                 replace_fragment(eventMediaFragment);
                 binding.menuLayout.setVisibility(View.GONE);
                 menuFlag = false;
+            }
+        });
+
+        binding.eventMenuLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EventFragment eventFragment = new EventFragment();
+                replace_fragment(eventFragment);
+                binding.menuLayout.setVisibility(View.GONE);
+                menuFlag = false;
+
             }
         });
 
@@ -201,7 +215,7 @@ public class DashboardVictimActivity extends AppCompatActivity {
                 binding.menuImageVictim.setImageResource(R.drawable.menu_b);
 
 
-              //  manualcodePopup();
+                //manualcodePopup();
                 if(menuFlag.booleanValue()==false){
                     binding.menuLayout.setVisibility(View.VISIBLE);
                     binding.menuLayout.setAnimation(animMoveUp);
@@ -280,7 +294,7 @@ public class DashboardVictimActivity extends AppCompatActivity {
         Log.i ("Service_status", "Not running");
         return false;
     }
-
+/*
     @Override
     protected void onDestroy() {
         Log.i ("Service_status", "On Destroy Called...");
@@ -290,6 +304,6 @@ public class DashboardVictimActivity extends AppCompatActivity {
         broadcastIntent.setClass(this, Restarter.class);
         this.sendBroadcast(broadcastIntent);
         super.onDestroy();
-    }
+    }*/
 
 }

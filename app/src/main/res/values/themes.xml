@@ -36,6 +36,11 @@
         <item name="cornerFamily">rounded</item>
     </style>
 
+    <style name="ImageCircleTheme">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10%</item>
+    </style>
+
 
     <style name="MyCustomActivityAnimation" parent="@android:style/Animation.Activity">
         <item name="android:activityOpenEnterAnimation">

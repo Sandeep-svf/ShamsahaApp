@@ -5,6 +5,7 @@ import com.shamsaha.victim.model.AboutBoardMemberModel;
 import com.shamsaha.victim.model.AboutModel;
 import com.shamsaha.victim.model.CommonModel;
 import com.shamsaha.victim.model.ContactUsDataModel;
+import com.shamsaha.victim.model.EventVolunteerModel;
 import com.shamsaha.victim.model.GetInvolvedModel;
 import com.shamsaha.victim.model.HomeModel;
 import com.shamsaha.victim.model.ResourceCategoryModel;
@@ -65,5 +66,9 @@ public interface Api {
     @FormUrlEncoded
     @POST("volunteer_login")
     Call<VolunteerLoginModel> VOLUNTEER_LOGIN_MODEL_CALL(@FieldMap Map<String, String> params);
+
+    @FormUrlEncoded
+    @POST("event/event_vol")
+    Call<EventVolunteerModel> EVENT_VOLUNTEER_MODEL_CALL (@Field("language") String language);
 
 }

@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 
 import com.shamsaha.R;
 import com.shamsaha.databinding.FragmentArticlesBinding;
+import com.shamsaha.victim.adapter.EventMediaArticleAdapter;
 import com.shamsaha.victim.adapter.ResourcesSST;
 
 
@@ -28,11 +29,11 @@ public class ArticlesFragment extends Fragment {
         binding = FragmentArticlesBinding.inflate(inflater, container, false);
         View view = binding.getRoot();
 
-       /* LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         linearLayoutManager.setOrientation(RecyclerView.VERTICAL);
         binding.rcvArticle.setLayoutManager(linearLayoutManager);
-        ResourcesSST resourcesSST = new ResourcesSST(getActivity());
-        binding.rcvArticle.setAdapter(resourcesSST);*/
+        EventMediaArticleAdapter resourcesSST = new EventMediaArticleAdapter(getActivity());
+        binding.rcvArticle.setAdapter(resourcesSST);
 
         return  view;
     }

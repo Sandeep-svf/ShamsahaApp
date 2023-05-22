@@ -1,12 +1,11 @@
 
-package com.shamsaha.victim.model;
+package com.shamsaha.victim.model.res;
 
-import javax.annotation.Generated;
+
 import com.google.gson.annotations.SerializedName;
 
-@Generated("net.hexar.json2pojo")
-@SuppressWarnings("unused")
-public class Datum {
+
+public class EventVolunteerRes {
 
     @SerializedName("event_address")
     private String mEventAddress;

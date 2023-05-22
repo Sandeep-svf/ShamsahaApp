@@ -21,7 +21,8 @@
     <string name="articles">Articles</string>
     <string name="about_shamsaha">About Shamsaha</string>
     <string name="get_involved">Get Involved</string>
-    <string name="event_media"><![CDATA[Event & Media]]></string>
+    <string name="event_media"> Media</string>
+    <string name="event">Event</string>
     <string name="contact_us">Contact Us</string>
     <string name="lock_app">Lock App</string>
     <string name="terms_condition"><![CDATA[Terms & Conditions]]></string>
@@ -71,4 +72,6 @@
     <string name="please_check_privacy_pocily">Please check privacy policy.</string>
     <string name="please_enter_password">Please enter password.</string>
     <string name="please_enter_minimum_eight_digit_password">Password length must be at leaset eight digit.</string>
+    <string name="volunteer">Volunteer</string>
+    <string name="publicstring">Public</string>
 </resources>

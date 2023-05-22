@@ -2,25 +2,24 @@
 package com.shamsaha.victim.model;
 
 import java.util.List;
-import javax.annotation.Generated;
 import com.google.gson.annotations.SerializedName;
+import com.shamsaha.victim.model.res.EventVolunteerRes;
 
-@Generated("net.hexar.json2pojo")
-@SuppressWarnings("unused")
+
 public class EventVolunteerModel {
 
     @SerializedName("Data")
-    private List<Datum> mData;
+    private List<EventVolunteerRes> mData;
     @SerializedName("message")
     private String mMessage;
     @SerializedName("success")
     private String mSuccess;
 
-    public List<Datum> getData() {
+    public List<EventVolunteerRes> getData() {
         return mData;
     }
 
-    public void setData(List<Datum> data) {
+    public void setData(List<EventVolunteerRes> data) {
         mData = data;
     }
 
