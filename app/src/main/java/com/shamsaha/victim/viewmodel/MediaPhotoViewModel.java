@@ -23,7 +23,13 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-
+/**
+ * This is the ViewModel class that handles the data and network requests
+ * for the About Activity or Fragment.
+ *
+ * @author Sandeep Maurya
+ * Created on 16/05/2023
+ */
 public class MediaPhotoViewModel extends ViewModel {
     private MutableLiveData<MediaPhotoModel> mediaPhotoModelMutableLiveData;
 

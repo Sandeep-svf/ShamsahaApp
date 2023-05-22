@@ -3,25 +3,28 @@ package com.shamsaha.victim.viewmodel;
 import android.content.Context;
 import android.util.Log;
 import android.widget.Toast;
-
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
-
 import com.shamsaha.retrofit.API_Client;
 import com.shamsaha.retrofit.Api;
 import com.shamsaha.victim.model.MediaArticleModel;
 import com.shamsaha.victim.model.MediaPhotoModel;
-
 import org.json.JSONObject;
-
 import java.io.IOException;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+
+/**
+ * This is the ViewModel class that handles the data and network requests
+ * for the Activity or Fragment.
+ *
+ * @author Sandeep Maurya
+ * Created on 16/05/2023
+ */
 
 public class MediaArticleViewModel extends ViewModel {
     private MutableLiveData<MediaArticleModel> articleModelMutableLiveData;

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.shamsaha" >
+    package="com.shamsaha">
     <!--
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
@@ -15,7 +15,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ShamsahaApp" >
+        android:theme="@style/Theme.ShamsahaApp">
+        <activity
+            android:name=".victim.auth.MobileNumberOTPVerificationActivity"
+            android:exported="true" />
         <activity
             android:name=".victim.auth.MobileNumberAuthActivity"
             android:exported="true" />
@@ -26,7 +29,7 @@
         <receiver
             android:name=".retrofit.Restarter"
             android:enabled="true"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="restartservice" />
             </intent-filter>
@@ -35,19 +38,17 @@
         <service
             android:name=".retrofit.LocationService"
             android:enabled="true"
-            android:stopWithTask="false" >
-        </service>
+            android:stopWithTask="false"></service>
         <service
             android:name=".retrofit.YourService"
-            android:stopWithTask="false" >
-        </service>
+            android:stopWithTask="false"></service>
 
         <activity
             android:name=".util.WebviewActivity"
             android:exported="true" />
         <activity
             android:name=".SplashActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
