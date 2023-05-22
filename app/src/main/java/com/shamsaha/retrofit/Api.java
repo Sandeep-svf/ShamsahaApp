@@ -8,10 +8,13 @@ import com.shamsaha.victim.model.ContactUsDataModel;
 import com.shamsaha.victim.model.EventVolunteerModel;
 import com.shamsaha.victim.model.GetInvolvedModel;
 import com.shamsaha.victim.model.HomeModel;
+import com.shamsaha.victim.model.MediaArticleModel;
+import com.shamsaha.victim.model.MediaPhotoModel;
 import com.shamsaha.victim.model.ResourceCategoryModel;
 import com.shamsaha.victim.model.ResourcesCountryModel;
 import com.shamsaha.victim.model.SSTModelNew;
 import com.shamsaha.victim.model.VolunteerLoginModel;
+import com.shamsaha.victim.model.res.MediaPhotoRes;
 
 import java.util.Map;
 
@@ -71,4 +74,11 @@ public interface Api {
     @POST("event/event_vol")
     Call<EventVolunteerModel> EVENT_VOLUNTEER_MODEL_CALL (@Field("language") String language);
 
+    @FormUrlEncoded
+    @POST("event/media_photo")
+    Call<MediaPhotoModel> MEDIA_PHOTO_MODEL_CALL (@Field("language") String language);
+
+    @FormUrlEncoded
+    @POST("event/media_article")
+    Call<MediaArticleModel> MEDIA_ARTICLE_MODEL_CALL (@Field("language") String language);
 }

@@ -14,8 +14,11 @@
         <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/drawable/custom_pink_color_bottom.xml" value="0.18981481481481483" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/drawable/custom_radius_corner.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/drawable/custom_radius_upper_corner.xml" value="0.17962962962962964" />
+        <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/drawable/custom_skip_button.xml" value="0.18703703703703703" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/drawable/custom_upper_curve.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/drawable/custom_upper_curve_pink.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/drawable/custom_yellow_button.xml" value="0.18703703703703703" />
+        <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/drawable/custom_yellow_button_4do_radious.xml" value="0.18703703703703703" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/drawable/ic_continue_credentials.xml" value="0.17962962962962964" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/drawable/ic_continue_credentials2.xml" value="0.17962962962962964" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/drawable/ic_credential_2.xml" value="0.17314814814814813" />
@@ -23,6 +26,7 @@
         <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/layout/activity_dashboard_vol.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/layout/activity_fullscreen.xml" value="0.1953125" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/layout/activity_mobile_number_auth.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/layout/activity_splash.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/layout/activity_webview.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/ShamsahaApp/app/src/main/res/layout/advisory_board_holder_design.xml" value="0.33" />

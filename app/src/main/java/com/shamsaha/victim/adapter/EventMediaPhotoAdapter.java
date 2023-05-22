@@ -6,16 +6,24 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.shamsaha.R;
+import com.shamsaha.victim.model.res.MediaPhotoRes;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class EventMediaPhotoAdapter extends RecyclerView.Adapter<PhotoViewHolder> {
 
     private Context context;
+    private List<MediaPhotoRes> mediaPhotoResList = new ArrayList<>();
 
-    public EventMediaPhotoAdapter(Context context) {
+    public EventMediaPhotoAdapter(Context context, List<MediaPhotoRes> mediaPhotoResList) {
         this.context = context;
+        this.mediaPhotoResList = mediaPhotoResList;
     }
 
     @NonNull
@@ -29,16 +37,22 @@ public class EventMediaPhotoAdapter extends RecyclerView.Adapter<PhotoViewHolder
     @Override
     public void onBindViewHolder(@NonNull PhotoViewHolder holder, int position) {
 
+        Glide.with(context)
+                .load(mediaPhotoResList.get(position).getMediaImage())
+                .placeholder(R.drawable.ic_launcher_background)
+                .into(holder.image);
     }
 
     @Override
     public int getItemCount() {
-        return 20;
+        return mediaPhotoResList.size();
     }
 }
 class PhotoViewHolder extends  RecyclerView.ViewHolder{
 
+    AppCompatImageView image;
     public PhotoViewHolder(@NonNull View itemView) {
         super(itemView);
+        image = itemView.findViewById(R.id.image);
     }
 }

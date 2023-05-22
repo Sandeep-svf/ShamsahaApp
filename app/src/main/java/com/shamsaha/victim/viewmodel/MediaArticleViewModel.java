@@ -1,38 +1,40 @@
 package com.shamsaha.victim.viewmodel;
 
+import android.content.Context;
 import android.util.Log;
 import android.widget.Toast;
-import androidx.fragment.app.FragmentActivity;
+
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
+
 import com.shamsaha.retrofit.API_Client;
 import com.shamsaha.retrofit.Api;
-import com.shamsaha.victim.model.EventVolunteerModel;
-import com.shamsaha.victim.model.VolunteerLoginModel;
+import com.shamsaha.victim.model.MediaArticleModel;
+import com.shamsaha.victim.model.MediaPhotoModel;
+
 import org.json.JSONObject;
+
 import java.io.IOException;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class EventVolunteerViewModel extends ViewModel {
+public class MediaArticleViewModel extends ViewModel {
+    private MutableLiveData<MediaArticleModel> articleModelMutableLiveData;
 
-    private MutableLiveData<EventVolunteerModel> eventVolunteerModelMutableLiveData;
-
-    public LiveData<EventVolunteerModel> getEventVolList(String language, FragmentActivity activity){
-        if(eventVolunteerModelMutableLiveData == null){
-            eventVolunteerModelMutableLiveData = new MutableLiveData<>();
-            loadEventVolList(language,activity);
+    public LiveData<MediaArticleModel> getMediaArticleList(String language, Context activity){
+        if(articleModelMutableLiveData == null){
+            articleModelMutableLiveData = new MutableLiveData<>();
+            load_media_article_list(language,activity);
         }
-
-
-        return eventVolunteerModelMutableLiveData;
+        return articleModelMutableLiveData;
     }
 
-    private void loadEventVolList(String language, FragmentActivity activity) {
+    private void load_media_article_list(String language, Context activity) {
 
             Retrofit retrofit = new Retrofit.Builder()
                     .baseUrl(API_Client.BASE_URL) // Replace with your API base URL
@@ -41,16 +43,16 @@ public class EventVolunteerViewModel extends ViewModel {
 
             Api apiService = retrofit.create(Api.class);
 
-            Call<EventVolunteerModel> call = apiService.EVENT_VOLUNTEER_MODEL_CALL("en");
-            call.enqueue(new Callback<EventVolunteerModel>() {
+            Call<MediaArticleModel> call = apiService.MEDIA_ARTICLE_MODEL_CALL("en");
+            call.enqueue(new Callback<MediaArticleModel>() {
                 @Override
-                public void onResponse(Call<EventVolunteerModel> call, Response<EventVolunteerModel> response) {
+                public void onResponse(Call<MediaArticleModel> call, Response<MediaArticleModel> response) {
                     if (response.isSuccessful()) {
 
-                        EventVolunteerModel eventVolunteerModel = response.body();
-                        eventVolunteerModelMutableLiveData.setValue(eventVolunteerModel);
+                        MediaArticleModel mediaArticleModel = response.body();
+                        articleModelMutableLiveData.setValue(mediaArticleModel);
 
-                    }else{
+                    } else {
                         try {
                             JSONObject jObjError = new JSONObject(response.errorBody().string());
 
@@ -89,7 +91,7 @@ public class EventVolunteerViewModel extends ViewModel {
                 }
 
                 @Override
-                public void onFailure(Call<EventVolunteerModel> call, Throwable t) {
+                public void onFailure(Call<MediaArticleModel> call, Throwable t) {
                     // Handle failure
                     Log.e("conversion issue", t.getMessage());
                     if (t instanceof IOException) {
@@ -101,8 +103,4 @@ public class EventVolunteerViewModel extends ViewModel {
                 }
             });
         }
-
-
-
-
 }

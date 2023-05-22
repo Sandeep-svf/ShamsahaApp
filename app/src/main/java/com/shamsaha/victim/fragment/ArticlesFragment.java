@@ -14,12 +14,14 @@ import com.shamsaha.R;
 import com.shamsaha.databinding.FragmentArticlesBinding;
 import com.shamsaha.victim.adapter.EventMediaArticleAdapter;
 import com.shamsaha.victim.adapter.ResourcesSST;
+import com.shamsaha.victim.viewmodel.MediaArticleViewModel;
 
 
 public class ArticlesFragment extends Fragment {
 
 
     FragmentArticlesBinding binding;
+    private MediaArticleViewModel viewModel;
 
 
     @Override
