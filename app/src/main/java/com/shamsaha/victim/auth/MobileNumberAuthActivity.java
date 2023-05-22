@@ -9,6 +9,7 @@ import android.view.View;
 
 import com.shamsaha.R;
 import com.shamsaha.databinding.ActivityMobileNumberAuthBinding;
+import com.shamsaha.util.MyListener;
 import com.shamsaha.victim.DashboardVictimActivity;
 
 public class MobileNumberAuthActivity extends AppCompatActivity {
@@ -20,7 +21,18 @@ public class MobileNumberAuthActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this,R.layout.activity_mobile_number_auth);
+        MyListener listener = new MyListener();
 
+        listener.onClick(binding.requestOtpButton);
+
+
+        binding.requestOtpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MobileNumberAuthActivity.this, MobileNumberOTPVerificationActivity.class);
+                startActivity(intent);
+            }
+        });
 
         binding.appCompatButton2.setOnClickListener(new View.OnClickListener() {
             @Override
