@@ -87,6 +87,7 @@
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         app:tabIndicatorColor="@color/white"
+        app:tabTextAppearance="@style/CustomTextAppearanceTab"
         app:tabSelectedTextColor="@color/white"
         app:tabTextColor="@color/white"
         android:backgroundTint="@color/dark_pick_them"

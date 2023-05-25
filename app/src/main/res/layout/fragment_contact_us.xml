@@ -378,6 +378,8 @@
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
 
+                            android:textSize="@dimen/text_heading_ultra_18sp"
+                            android:textAllCaps="false"
                             app:layout_constraintWidth_percent="0.25"
                             app:layout_constraintHeight_percent="0.9"
                             android:background="@drawable/custom_yellow_button"

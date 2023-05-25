@@ -304,10 +304,11 @@
                     android:id="@+id/submit_otp_button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
+                    android:textAllCaps="false"
                     android:background="@drawable/custom_yellow_button_4do_radious"
                     android:fontFamily="@font/avenir_heavy"
                     android:text="@string/submit"
+                    android:textSize="@dimen/text_heading_ultra_18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

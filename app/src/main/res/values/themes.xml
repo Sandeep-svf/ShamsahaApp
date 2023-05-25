@@ -34,7 +34,10 @@
         <item name="cornerSizeTopRight">14dp</item>
     </style>
 
-
+    <style name="CustomTextAppearanceTab" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
 
 
     <!-- ShapeableImageView theme. (note that the parent matches the Base App theme) -->

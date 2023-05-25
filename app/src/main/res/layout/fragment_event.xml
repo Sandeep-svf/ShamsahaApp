@@ -97,6 +97,7 @@
             app:tabIndicatorColor="@color/white"
             app:tabSelectedTextColor="@color/white"
             app:tabTextColor="@color/white"
+            app:tabTextAppearance="@style/CustomTextAppearanceTab"
             android:backgroundTint="@color/dark_pick_them"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

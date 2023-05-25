@@ -91,6 +91,7 @@
             android:layout_height="wrap_content"
             android:background="?attr/colorPrimary"
             android:minHeight="?attr/actionBarSize"
+            app:tabTextAppearance="@style/CustomTextAppearanceTab"
             app:tabIndicatorColor="@color/white"
             app:tabSelectedTextColor="@color/white"
             app:tabTextColor="@color/white"

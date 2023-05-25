@@ -44,10 +44,10 @@ public class MobileNumberOTPVerificationActivity extends AppCompatActivity {
 
         String mobileNumber = getIntent().getStringExtra("mobileNumber");
         binding.emailVolLogin.setText(mobileNumber);
-        send_verification_code("+919319676899");
+        send_verification_code("+973"+mobileNumber);
+       // send_verification_code("+91"+mobileNumber);
 
-        SharedPreferencesHelper sharedPreferencesHelper = new SharedPreferencesHelper(MobileNumberOTPVerificationActivity.this);
-        sharedPreferencesHelper.setVicitmMobileWizardFlag("true");
+
 
 
         binding.backButton.setOnClickListener(new View.OnClickListener() {
@@ -72,7 +72,7 @@ public class MobileNumberOTPVerificationActivity extends AppCompatActivity {
                 if(binding.otpEdittext.getText().toString().equals("")||binding.otpEdittext.getText().toString().length()<6){
                     Toast.makeText(MobileNumberOTPVerificationActivity.this, getResources().getString(R.string.please_enter_valid_otp), Toast.LENGTH_SHORT).show();
                 }else{
-                    String code = "123456"; // Replace with the code sent to the user's phone
+                    String code = binding.otpEdittext.getText().toString(); // Replace with the code sent to the user's phone
                     PhoneAuthCredential credential = PhoneAuthProvider.getCredential(phoneVerificationId, code);
                     signInWithPhoneAuthCredential(credential);
                 }
@@ -108,7 +108,7 @@ public class MobileNumberOTPVerificationActivity extends AppCompatActivity {
                 @Override
                 public void onVerificationFailed(FirebaseException e) {
                     // Verification failed, handle the error
-                    Toast.makeText(MobileNumberOTPVerificationActivity.this, getResources().getString(R.string.something_went_wrong), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MobileNumberOTPVerificationActivity.this, getResources().getString(R.string.something_went_wrong_please_check), Toast.LENGTH_SHORT).show();
                     Log.e("test_sam_otp",e+"sam");
                     Intent intent = new Intent(MobileNumberOTPVerificationActivity.this, MobileNumberAuthActivity.class);
                     startActivity(intent);
@@ -138,6 +138,11 @@ public class MobileNumberOTPVerificationActivity extends AppCompatActivity {
                             // User successfully signed in
                             AuthResult result = task.getResult();
                             FirebaseUser user = result.getUser();
+
+
+                            SharedPreferencesHelper sharedPreferencesHelper = new SharedPreferencesHelper(MobileNumberOTPVerificationActivity.this);
+                            sharedPreferencesHelper.setVicitmMobileWizardFlag("true");
+
                             // Do further actions with the signed-in user
                             Toast.makeText(MobileNumberOTPVerificationActivity.this, getResources().getString(R.string.otp_verificaiton_successful), Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(MobileNumberOTPVerificationActivity.this, DashboardVictimActivity.class);
@@ -145,11 +150,7 @@ public class MobileNumberOTPVerificationActivity extends AppCompatActivity {
                             finish();
                         } else {
                             // Verification failed, handle the error
-                            Toast.makeText(MobileNumberOTPVerificationActivity.this, getResources().getString(R.string.something_went_wrong), Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(MobileNumberOTPVerificationActivity.this, MobileNumberAuthActivity.class);
-                            startActivity(intent);
-                            finish();
-
+                            Toast.makeText(MobileNumberOTPVerificationActivity.this, getResources().getString(R.string.wrong_otp_please_try_agin), Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
