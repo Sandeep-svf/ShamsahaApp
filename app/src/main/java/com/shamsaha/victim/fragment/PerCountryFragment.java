@@ -118,10 +118,10 @@ public class PerCountryFragment extends Fragment {
                                 ResourcesPerCountryAdapter resourcesPerCountryAdapter = new ResourcesPerCountryAdapter(getActivity(),resourcesCaregoryResList);
                                 binding.rcvPerCountryList.setAdapter(resourcesPerCountryAdapter);
 
-                                Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
+                               // Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
                             } else {
 
-
+                                Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
                             }
 
                         } else {
@@ -221,9 +221,9 @@ public class PerCountryFragment extends Fragment {
                             binding.spinPerCountry.setAdapter(dAdapter);
                             binding.spinPerCountry.setSelection(dAdapter.getCount());
 
-                            Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
-                        } else {
 
+                        } else {
+                            Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
 
                         }
 

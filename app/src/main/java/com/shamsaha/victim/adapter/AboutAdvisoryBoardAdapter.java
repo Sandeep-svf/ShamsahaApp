@@ -22,8 +22,10 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.google.android.material.imageview.ShapeableImageView;
 import com.shamsaha.R;
 import com.shamsaha.retrofit.API_Client;
+import com.shamsaha.util.TopRoundedCornerDrawable;
 import com.shamsaha.victim.model.res.AboutBoardMemberRes;
 
 import java.util.ArrayList;
@@ -47,8 +49,11 @@ public class AboutAdvisoryBoardAdapter extends RecyclerView.Adapter<AdvisoryBoar
         return new AdvisoryBoardViewHolder(view);
     }
 
+
+
     @Override
     public void onBindViewHolder(@NonNull AdvisoryBoardViewHolder holder, int position) {
+
 
 
         Glide.with(context)

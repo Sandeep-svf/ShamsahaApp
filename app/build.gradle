@@ -1,14 +1,15 @@
 plugins {
     id 'com.android.application'
+    id 'com.google.gms.google-services'
 }
 
 android {
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.shamsaha"
         minSdk 21
-        targetSdk 33
+        targetSdk 32
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -32,6 +33,7 @@ android {
 
 def retrofitVersion = '2.8.2'
 dependencies {
+
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.6.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
@@ -65,5 +67,10 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-runtime:2.4.0'
 
     implementation 'com.google.android.gms:play-services-location:18.0.0'
+
+    //Firebase
+    implementation 'com.google.firebase:firebase-auth:20.0.1'
+    //implementation 'com.google.firebase:firebase-auth:21.0.1'
+
 
 }

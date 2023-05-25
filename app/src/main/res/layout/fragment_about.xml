@@ -42,6 +42,7 @@
 
                             <androidx.appcompat.widget.AppCompatImageView
                                 android:layout_width="25dp"
+                                android:visibility="gone"
                                 android:layout_height="25dp"
                                 android:src="@drawable/left_arrow_white"
                                 app:layout_constraintTop_toTopOf="parent"
@@ -258,7 +259,8 @@
                                         ></androidx.appcompat.widget.AppCompatTextView>
                                     <androidx.appcompat.widget.AppCompatTextView
                                         android:id="@+id/designation_description"
-                                        android:layout_width="wrap_content"
+                                        android:layout_width="0dp"
+                                        app:layout_constraintWidth_percent="0.55"
                                         android:layout_height="wrap_content"
 
                                         app:layout_constraintTop_toBottomOf="@+id/designation_name"
@@ -350,10 +352,12 @@
                                         ></androidx.appcompat.widget.AppCompatTextView>
                                     <androidx.appcompat.widget.AppCompatTextView
                                         android:id="@+id/designation_description2"
-                                        android:layout_width="wrap_content"
+                                        android:layout_width="0dp"
+                                        app:layout_constraintWidth_percent="0.55"
                                         android:layout_height="wrap_content"
                                         app:layout_constraintTop_toBottomOf="@+id/designation_name2"
                                         app:layout_constraintStart_toStartOf="@+id/designation_name2"
+
 
 
                                         android:text="Shamsaha founder and excutive director"
@@ -424,12 +428,15 @@
                         android:id="@+id/rcv_advisory_board"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
+                        android:layout_marginBottom="40dp"
 
                         app:layout_constraintHeight_percent="1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/sl8934934"
                         ></androidx.recyclerview.widget.RecyclerView>
+
+
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 

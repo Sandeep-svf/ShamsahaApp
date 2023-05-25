@@ -46,6 +46,7 @@
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
+                android:visibility="gone"
 
 
                 app:layout_constraintHeight_percent="0.3"
@@ -63,7 +64,7 @@
             <androidx.appcompat.widget.AppCompatTextView
 
                 android:layout_width="wrap_content"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
 
                 app:layout_constraintHeight_percent="0.3"
                 app:layout_constraintWidth_percent="0.4"
@@ -487,6 +488,7 @@
             android:fontFamily="@font/avenir_heavy"
             android:text="@string/new_user"
             app:fontFamily="@font/avenir_heavy"
+            android:visibility="gone"
             app:layout_constraintBottom_toTopOf="@+id/sfdsgfdsg"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"

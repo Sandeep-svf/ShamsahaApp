@@ -88,11 +88,11 @@ public class SurvivorSupportToolsFragment extends Fragment {
                                 ResourcesSST resourcesSST = new ResourcesSST(getActivity(),sstDataEnList);
                                 binding.rcvSst.setAdapter(resourcesSST);
 
-                                Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
+
 
                             } else {
 
-
+                                Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
                             }
 
                         } else {

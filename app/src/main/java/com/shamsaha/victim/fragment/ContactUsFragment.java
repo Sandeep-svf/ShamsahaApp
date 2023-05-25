@@ -105,9 +105,9 @@ public class ContactUsFragment extends Fragment {
                                 Log.e("test_sam",contactUsDataRes.getImage());
                                 Log.e("test_sam",contactUsDataRes.getGoogleMap());
 
-                                Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
-                            } else {
 
+                            } else {
+                                Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
                             }
 
                         } else {
@@ -177,7 +177,7 @@ public class ContactUsFragment extends Fragment {
             pd.setMessage("loading...");
             pd.show();
 
-            Call<CommonModel> call = API_Client.getClient().COMMON_MODEL_CONTACT_US_CALL(
+            Call<CommonModel> call = API_Client.getClient().COMMON_MODEL_CONTACT_US_CALL("en",
                     binding.nameContactUs.getText().toString(),
                     binding.phoneContactUs.getText().toString(),
                     binding.emailContactUs.getText().toString(),

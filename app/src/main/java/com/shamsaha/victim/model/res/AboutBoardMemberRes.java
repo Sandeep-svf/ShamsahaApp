@@ -7,7 +7,7 @@ import com.google.gson.annotations.SerializedName;
 
 public class AboutBoardMemberRes {
 
-    @SerializedName("bname")
+    @SerializedName("name")
     private String mBname;
     @SerializedName("designation")
     private String mDesignation;

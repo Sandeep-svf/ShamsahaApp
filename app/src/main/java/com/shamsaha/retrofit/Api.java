@@ -41,7 +41,8 @@ public interface Api {
 
     @FormUrlEncoded
     @POST("Con_message")
-    Call<CommonModel> COMMON_MODEL_CONTACT_US_CALL (@Field("name") String name,
+    Call<CommonModel> COMMON_MODEL_CONTACT_US_CALL (@Field("language") String language,
+                                                    @Field("name") String name,
                                                     @Field("phone") String phone,
                                                     @Field("email") String email,
                                                     @Field("message") String message);
@@ -81,4 +82,7 @@ public interface Api {
     @FormUrlEncoded
     @POST("event/media_article")
     Call<MediaArticleModel> MEDIA_ARTICLE_MODEL_CALL (@Field("language") String language);
+
+
+
 }

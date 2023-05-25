@@ -211,11 +211,11 @@ public class AboutFragment extends Fragment {
                                 AboutAdvisoryBoardAdapter aboutAdvisoryBoardAdapter = new AboutAdvisoryBoardAdapter(getActivity(),aboutBoardMemberResList);
                                 binding.rcvAdvisoryBoard.setAdapter(aboutAdvisoryBoardAdapter);
 
-                                Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
+
 
                             } else {
 
-
+                                Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
                             }
 
                         } else {
@@ -328,10 +328,10 @@ public class AboutFragment extends Fragment {
                                         .placeholder(R.drawable.ic_launcher_background)
                                         .into(binding.FounderImageView);
 
-                                Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
+
 
                             } else {
-
+                                Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
 
                             }
 

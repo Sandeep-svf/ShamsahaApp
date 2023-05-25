@@ -45,6 +45,7 @@
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
+                android:visibility="gone"
 
                 app:layout_constraintHeight_percent="0.3"
                 app:layout_constraintWidth_percent="0.1"
@@ -60,8 +61,8 @@
 
             <androidx.appcompat.widget.AppCompatTextView
 
-                android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
 
                 app:layout_constraintHeight_percent="0.3"
                 app:layout_constraintWidth_percent="0.4"
@@ -225,6 +226,7 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             android:background="@null"
                             android:inputType="number"
+                            android:maxLength="10"
                             android:textColorHint="@color/hint_color"
                             android:textSize="@dimen/text_normal_12sp"
                             android:fontFamily="@font/avenir_heavy"

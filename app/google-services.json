@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "252274353834",
+    "project_id": "shamshamobapps",
+    "storage_bucket": "shamshamobapps.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:252274353834:android:b329099c01216da7fb52d3",
+        "android_client_info": {
+          "package_name": "com.shamsaha"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "252274353834-13co18rm63eg29lopkfprq1ikttqhfn9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shamsaha",
+            "certificate_hash": "c91338ed7088af007f20856fae213ffd2055bf1d"
+          }
+        },
+        {
+          "client_id": "252274353834-260qdirs36315aje9571cmhp6aer0f40.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAw67Ck915TS2-r4_vrTxMvO59SzKervpg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "252274353834-260qdirs36315aje9571cmhp6aer0f40.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
