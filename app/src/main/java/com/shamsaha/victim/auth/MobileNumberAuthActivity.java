@@ -78,6 +78,10 @@ public class MobileNumberAuthActivity extends AppCompatActivity {
         if(binding.phoneVictimEdittext.getText().toString().equals("")){
             Toast.makeText(MobileNumberAuthActivity.this, getResources().getString(R.string.please_enter_phone), Toast.LENGTH_SHORT).show();
             return false;
+        }if(binding.phoneVictimEdittext.getText().toString().length()<7 ||
+                binding.phoneVictimEdittext.getText().toString().length()>15){
+            Toast.makeText(MobileNumberAuthActivity.this, getResources().getString(R.string.please_enter_valid_phone), Toast.LENGTH_SHORT).show();
+            return false;
         }
         return true;
     }

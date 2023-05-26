@@ -7,6 +7,7 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,11 +42,17 @@ public class VolunteerLoginFragment extends Fragment {
                 if (validation()) {
 
                     get_data();
-                    viewModel.getUser(params,getActivity()).observe(getActivity(), userLiveData-> {
+
+
+
+                   /* viewModel.getUser(params,getActivity()).observe(getActivity(), userLiveData-> {
 
                         String success = userLiveData.getSuccess();
                         String message = userLiveData.getMessage();
                         if(success.equalsIgnoreCase("true")){
+
+                            params.clear();
+
                             Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(getActivity(),DashboardVol.class);
                             startActivity(intent);
@@ -53,7 +60,7 @@ public class VolunteerLoginFragment extends Fragment {
                             Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
                         }
 
-                    });
+                    });*/
                 }
             }
         });
@@ -65,6 +72,10 @@ public class VolunteerLoginFragment extends Fragment {
         params = new HashMap<String, String>();
         params.put("email", binding.emailVolLogin.getText().toString());
         params.put("password", binding.passwordVolLogin.getText().toString());
+
+        Log.e("test_sam_login_vol","email :"+binding.emailVolLogin.getText().toString());
+        Log.e("test_sam_login_vol","password :"+binding.passwordVolLogin.getText().toString());
+
     }
 
 

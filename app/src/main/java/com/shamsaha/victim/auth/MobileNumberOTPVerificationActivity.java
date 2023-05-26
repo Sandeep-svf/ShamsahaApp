@@ -36,6 +36,14 @@ public class MobileNumberOTPVerificationActivity extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
     private String phoneVerificationId;
 
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +51,8 @@ public class MobileNumberOTPVerificationActivity extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
 
         String mobileNumber = getIntent().getStringExtra("mobileNumber");
-        binding.emailVolLogin.setText(mobileNumber);
+        Log.e("test_sam_otp","mobileNumber :"+mobileNumber);
+        binding.emailVolLogin.setText("+973"+mobileNumber);
         send_verification_code("+973"+mobileNumber);
        // send_verification_code("+91"+mobileNumber);
 

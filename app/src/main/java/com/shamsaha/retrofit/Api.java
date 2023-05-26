@@ -3,6 +3,7 @@ package com.shamsaha.retrofit;
 
 import com.shamsaha.victim.model.AboutBoardMemberModel;
 import com.shamsaha.victim.model.AboutModel;
+import com.shamsaha.victim.model.CheckDeviceWithPhoneModel;
 import com.shamsaha.victim.model.CommonModel;
 import com.shamsaha.victim.model.ContactUsDataModel;
 import com.shamsaha.victim.model.EventVolunteerModel;
@@ -82,6 +83,11 @@ public interface Api {
     @FormUrlEncoded
     @POST("event/media_article")
     Call<MediaArticleModel> MEDIA_ARTICLE_MODEL_CALL (@Field("language") String language);
+
+
+    @FormUrlEncoded
+    @POST("create_victim/check_device_noMobile")
+    Call<CheckDeviceWithPhoneModel> CHECK_DEVICE_WITH_PHONE_MODEL_CALL(@Field("deviceid") String deviceid);
 
 
 
