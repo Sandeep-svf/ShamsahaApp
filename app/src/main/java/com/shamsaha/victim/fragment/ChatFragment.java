@@ -16,6 +16,7 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -76,15 +77,15 @@ public class ChatFragment extends Fragment {
             //36f18e2c1b326aa3a82987fafeef30ea07cab724
         }
 
-        viewModel.getCheckWithDeviceIdPHone(deviceId,getActivity()).observe(getActivity(),CheckDeviceIdWithPhoneViewModel ->{
+        viewModel.getCheckWithDeviceIdPHone(deviceId, getActivity()).observe(getActivity(), CheckDeviceIdWithPhoneViewModel -> {
             String success = CheckDeviceIdWithPhoneViewModel.getSuccess();
             String message = CheckDeviceIdWithPhoneViewModel.getMessage();
 
-            if(success.equalsIgnoreCase("true")){
-               //Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
+            if (success.equalsIgnoreCase("true")) {
+                //Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
                 open_mobile_number_verificaiton_popup(getActivity());
-            }else{
-               // Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
+            } else {
+                // Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
                 open_mobile_number_verificaiton_popup(getActivity());
             }
         });
@@ -97,8 +98,7 @@ public class ChatFragment extends Fragment {
         final LayoutInflater inflater = getActivity().getLayoutInflater();
         View alertLayout = inflater.inflate(R.layout.test_dialog_xml_otp, null);
 
-        final ImageView close_dialog = alertLayout.findViewById(R.id.close_dialog);
-
+        final AppCompatImageView close_dialog = alertLayout.findViewById(R.id.close_dialog);
 
 
         final AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
@@ -126,7 +126,7 @@ public class ChatFragment extends Fragment {
         final LayoutInflater inflater = getActivity().getLayoutInflater();
         View alertLayout = inflater.inflate(R.layout.test_dialog_xml_otp, null);
 
-        final AppCompatImageView close_dialog = alertLayout.findViewById(R.id.close_dialog);
+        final AppCompatImageView close_dialog = alertLayout.findViewById(R.id.close_icon);
         final AppCompatButton request_otp_button = alertLayout.findViewById(R.id.request_otp_button);
         final AppCompatEditText phoneVictimEdittext = alertLayout.findViewById(R.id.phoneVictimEdittext);
 
@@ -151,17 +151,18 @@ public class ChatFragment extends Fragment {
                     e.printStackTrace();
                     Toast.makeText(getActivity(), getResources().getString(R.string.something_went_wrong), Toast.LENGTH_SHORT).show();
                 }
-                
-                otp_verificaiton_popup(activity,phoneVictimEdittext.getText().toString());
+
+                otp_verificaiton_popup(activity, phoneVictimEdittext.getText().toString());
             }
         });
 
-        /*close_dialog.setOnClickListener(new View.OnClickListener() {
+
+        close_dialog.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 dialogs.dismiss();
             }
-        });*/
+        });
 
 
     }
@@ -172,7 +173,7 @@ public class ChatFragment extends Fragment {
         final LayoutInflater inflater = getActivity().getLayoutInflater();
         View alertLayout = inflater.inflate(R.layout.test_dialog_xml_otp2, null);
 
-        final AppCompatImageView close_dialog = alertLayout.findViewById(R.id.close_dialog);
+        final AppCompatImageView close_dialog = alertLayout.findViewById(R.id.close_icon);
         final AppCompatButton request_otp_button = alertLayout.findViewById(R.id.request_otp_button);
         final AppCompatTextView phoneVictimEdittext = alertLayout.findViewById(R.id.phoneVictimEdittext);
         final AppCompatEditText otp_edittext = alertLayout.findViewById(R.id.otp_edittext);
@@ -193,9 +194,9 @@ public class ChatFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                if(otp_edittext.getText().toString().equals("") || otp_edittext.getText().toString().length() < 6){
+                if (otp_edittext.getText().toString().equals("") || otp_edittext.getText().toString().length() < 6) {
                     Toast.makeText(getActivity(), getResources().getString(R.string.please_enter_valid_otp), Toast.LENGTH_SHORT).show();
-                }else{
+                } else {
                     String code = otp_edittext.getText().toString(); // Replace with the code sent to the user's phone
                     PhoneAuthCredential credential = PhoneAuthProvider.getCredential(phoneVerificationId, code);
                     signInWithPhoneAuthCredential(credential);
@@ -205,6 +206,12 @@ public class ChatFragment extends Fragment {
         });
 
 
+        close_dialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialogs.dismiss();
+            }
+        });
 
 
     }
@@ -220,7 +227,6 @@ public class ChatFragment extends Fragment {
                         .build();
         PhoneAuthProvider.verifyPhoneNumber(options);
     }
-
 
 
     PhoneAuthProvider.OnVerificationStateChangedCallbacks callbacks =
@@ -270,5 +276,5 @@ public class ChatFragment extends Fragment {
                 });
 
     }
-    
+
 }
