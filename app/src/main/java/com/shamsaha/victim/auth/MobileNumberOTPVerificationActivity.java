@@ -35,33 +35,30 @@ import java.util.concurrent.TimeUnit;
 
 public class MobileNumberOTPVerificationActivity extends AppCompatActivity {
 
-    ActivityMobileNumberOtpverificationBinding binding;
+    private ActivityMobileNumberOtpverificationBinding binding;
     private CreateVictimViewModel viewModel;
     private FirebaseAuth firebaseAuth;
     private String phoneVerificationId;
     private String mobileNumber;
     private String deviceId;
 
-
     @Override
     protected void onResume() {
         super.onResume();
-
-
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this,R.layout.activity_mobile_number_otpverification);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_mobile_number_otpverification);
         viewModel = new ViewModelProvider(this).get(CreateVictimViewModel.class);
         firebaseAuth = FirebaseAuth.getInstance();
 
         try {
             mobileNumber = getIntent().getStringExtra("mobileNumber");
-            Log.e("test_sam_otp","mobileNumber :"+mobileNumber);
-            binding.emailVolLogin.setText("+973"+mobileNumber);
-            send_verification_code("+973"+mobileNumber);
+            Log.e("test_sam_otp", "mobileNumber :" + mobileNumber);
+            binding.emailVolLogin.setText("+973" + mobileNumber);
+            send_verification_code("+973" + mobileNumber);
             // send_verification_code("+91"+mobileNumber);
         } catch (NullPointerException e) {
             e.printStackTrace();
@@ -88,9 +85,9 @@ public class MobileNumberOTPVerificationActivity extends AppCompatActivity {
         binding.submitOtpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(binding.otpEdittext.getText().toString().equals("")||binding.otpEdittext.getText().toString().length()<6){
+                if (binding.otpEdittext.getText().toString().equals("") || binding.otpEdittext.getText().toString().length() < 6) {
                     Toast.makeText(MobileNumberOTPVerificationActivity.this, getResources().getString(R.string.please_enter_valid_otp), Toast.LENGTH_SHORT).show();
-                }else{
+                } else {
 
                     deviceId = DeviceUtils.getUniqueDeviceId(MobileNumberOTPVerificationActivity.this);
                     if (deviceId != null) {
@@ -100,15 +97,6 @@ public class MobileNumberOTPVerificationActivity extends AppCompatActivity {
                     String code = binding.otpEdittext.getText().toString(); // Replace with the code sent to the user's phone
                     PhoneAuthCredential credential = PhoneAuthProvider.getCredential(phoneVerificationId, code);
                     signInWithPhoneAuthCredential(credential);
-
-
-
-
-
-
-
-
-
                 }
 
             }
@@ -143,7 +131,7 @@ public class MobileNumberOTPVerificationActivity extends AppCompatActivity {
                 public void onVerificationFailed(FirebaseException e) {
                     // Verification failed, handle the error
                     Toast.makeText(MobileNumberOTPVerificationActivity.this, getResources().getString(R.string.something_went_wrong_please_check), Toast.LENGTH_SHORT).show();
-                    Log.e("test_sam_otp",e+"sam");
+                    Log.e("test_sam_otp", e + "sam");
                     Intent intent = new Intent(MobileNumberOTPVerificationActivity.this, MobileNumberAuthActivity.class);
                     startActivity(intent);
                 }
@@ -178,12 +166,12 @@ public class MobileNumberOTPVerificationActivity extends AppCompatActivity {
                             Toast.makeText(MobileNumberOTPVerificationActivity.this, getResources().getString(R.string.otp_verificaiton_successful), Toast.LENGTH_SHORT).show();
 
 
-                            viewModel.getCreateVictim(deviceId,mobileNumber,MobileNumberOTPVerificationActivity.this)
+                            viewModel.getCreateVictim(deviceId, mobileNumber, MobileNumberOTPVerificationActivity.this)
                                     .observe(MobileNumberOTPVerificationActivity.this, CheckDeviceIdWithPhoneViewModel -> {
                                         String success = CheckDeviceIdWithPhoneViewModel.getSuccess();
                                         String message = CheckDeviceIdWithPhoneViewModel.getMessage();
 
-                                        if(success.equalsIgnoreCase("true")){
+                                        if (success.equalsIgnoreCase("true")) {
 
                                             SharedPreferencesHelper sharedPreferencesHelper = new SharedPreferencesHelper(MobileNumberOTPVerificationActivity.this);
                                             sharedPreferencesHelper.setVicitmMobileWizardFlag("true");
@@ -193,13 +181,11 @@ public class MobileNumberOTPVerificationActivity extends AppCompatActivity {
                                             finish();
 
                                             Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
-
-                                        }else{
-                                            Toast.makeText(getApplicationContext(), getResources().getString(R.string.something_went_wrong)+" "+message, Toast.LENGTH_SHORT).show();
+                                        } else {
+                                            Toast.makeText(getApplicationContext(), getResources().getString(R.string.something_went_wrong) + " " + message, Toast.LENGTH_SHORT).show();
                                             // open_mobile_number_verificaiton_popup(getActivity());
                                         }
                                     });
-
 
 
                         } else {
@@ -208,6 +194,7 @@ public class MobileNumberOTPVerificationActivity extends AppCompatActivity {
                         }
                     }
                 });
+
     }
 
 }

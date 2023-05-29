@@ -92,5 +92,6 @@
     <string name="yes">yes</string>
     <string name="otp_verificaiton_successful">OTP Verification Successful.</string>
     <string name="please_enter_valid_otp">please enter valid OTP</string>
+    <string name="please_enter_otp">please enter OTP</string>
     <string name="wrong_otp_please_try_agin">wrong OTP, Please try again.</string>
 </resources>
