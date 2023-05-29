@@ -15,7 +15,6 @@ import com.shamsaha.victim.model.ResourceCategoryModel;
 import com.shamsaha.victim.model.ResourcesCountryModel;
 import com.shamsaha.victim.model.SSTModelNew;
 import com.shamsaha.victim.model.VolunteerLoginModel;
-import com.shamsaha.victim.model.res.MediaPhotoRes;
 
 import java.util.Map;
 
@@ -90,5 +89,10 @@ public interface Api {
     Call<CheckDeviceWithPhoneModel> CHECK_DEVICE_WITH_PHONE_MODEL_CALL(@Field("deviceid") String deviceid);
 
 
+
+    @FormUrlEncoded
+    @POST("create_victim")
+    Call<CheckDeviceWithPhoneModel> CREATE_VICTIM_MODEL_CALL(@Field("deviceid") String deviceid,
+                                                                   @Field("mobile") String mobile);
 
 }
