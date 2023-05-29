@@ -33,10 +33,8 @@ import java.util.concurrent.TimeUnit;
 
 public class MobileNumberAuthActivity extends AppCompatActivity {
 
-
     ActivityMobileNumberAuthBinding binding;
     private CreateVictimViewModel viewModel;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,13 +89,8 @@ public class MobileNumberAuthActivity extends AppCompatActivity {
                                 // open_mobile_number_verificaiton_popup(getActivity());
                             }
                         });
-
             }
         });
-
-
-
-
     }
 
     private boolean validation() {
