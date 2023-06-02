@@ -3,24 +3,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.shamsaha">
 
-
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS"></uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
     <uses-permission android:name="android.permission.INTERNET" />
-
-
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:requestLegacyExternalStorage="true"
-        android:largeHeap="true"
-        android:usesCleartextTraffic="true"
-        android:hardwareAccelerated="true"
-        android:theme="@style/Theme.ShamsahaApp">
+        android:theme="@style/Theme.ShamsahaApp"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".volunteer.view.DashboardVolunteerActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".victim.auth.MobileNumberOTPVerificationActivity"
             android:exported="true" />
@@ -43,29 +48,21 @@
         <service
             android:name=".retrofit.LocationService"
             android:enabled="true"
-            android:stopWithTask="false"></service>
+            android:stopWithTask="false" />
         <service
             android:name=".retrofit.YourService"
-            android:stopWithTask="false"></service>
+            android:stopWithTask="false" />
 
         <activity
             android:name=".util.WebviewActivity"
             android:exported="true" />
-
-        <activity android:name=".util.NewSplashActivity"
-            android:exported="true">
-
-
-        </activity>
-
+        <activity
+            android:name=".util.NewSplashActivity"
+            android:exported="true"></activity>
         <activity
             android:name=".SplashActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".victim.DashboardVictimActivity"

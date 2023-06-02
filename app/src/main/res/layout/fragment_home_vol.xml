@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/yellow_them"
+        tools:context=".volunteer.view.HomeVolFragment">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout8"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/profile_vol_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.125"
+
+
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/logo_contact_us"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:scaleType="fitXY"
+                android:src="@drawable/logo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.3"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.25"
+                app:layout_constraintWidth_percent="0.4"></androidx.appcompat.widget.AppCompatImageView>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/avenir_heavy"
+                android:gravity="center"
+                android:scaleType="fitXY"
+                android:text="@string/dashboard"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_heading_super_ultra_24sp"
+                android:textStyle="bold"
+                app:fontFamily="@font/avenir_heavy"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.3"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.85"
+                app:layout_constraintWidth_percent="0.4"></androidx.appcompat.widget.AppCompatTextView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profile_vol_layout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/mod_vol_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.125"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout8"
+            app:layout_constraintWidth_percent="0.9">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image_vol"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/ic_launcher_background"
+                app:civ_border_color="@color/white"
+
+                app:civ_border_width="1dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                app:layout_constraintHeight_percent="0.85"
+                app:layout_constraintHorizontal_bias="0.05"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.25"
+
+
+                ></de.hdodenhof.circleimageview.CircleImageView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/name_vol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/avenir_heavy"
+                android:text="Mary-Justin Todd"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_heading_ultra_18sp"
+                app:layout_constraintBottom_toTopOf="@+id/level_vol"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintStart_toEndOf="@+id/image_vol"
+                app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.AppCompatTextView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/level_vol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/avenir_heavy"
+                android:text="Beginner"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_heading_ultra_18sp"
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayout9"
+                app:layout_constraintStart_toStartOf="@+id/name_vol"
+                app:layout_constraintTop_toBottomOf="@+id/name_vol"></androidx.appcompat.widget.AppCompatTextView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout9"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHeight_percent="0.3"
+                app:layout_constraintStart_toStartOf="@+id/name_vol"
+                app:layout_constraintTop_toBottomOf="@+id/level_vol"
+                app:layout_constraintWidth_percent="0.5">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/level1"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:src="@drawable/ic_launcher_background"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHeight_percent="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.15"
+
+                    ></androidx.appcompat.widget.AppCompatImageView>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/level2"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:src="@drawable/ic_launcher_background"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHeight_percent="1"
+                    app:layout_constraintStart_toEndOf="@+id/level1"
+                    android:layout_marginStart="5dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.15"
+
+                    ></androidx.appcompat.widget.AppCompatImageView>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/level3"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:src="@drawable/ic_launcher_background"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHeight_percent="1"
+                    app:layout_constraintStart_toEndOf="@+id/level2"
+                    android:layout_marginStart="5dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.15"></androidx.appcompat.widget.AppCompatImageView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.975"
+                app:layout_constraintTop_toTopOf="parent"
+
+
+                ></androidx.appcompat.widget.SwitchCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mod_vol_layout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/cutom_blue_bg_vol_dashboard"
+            app:layout_constraintBottom_toTopOf="@+id/tab_vol"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.065"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@+id/profile_vol_layout"
+            app:layout_constraintWidth_percent="0.9">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mod1_vol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/avenir_heavy"
+                android:text="manager on duity (MoD) "
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_normal_12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/mod2_vol"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.AppCompatTextView>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mod2_vol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/avenir_heavy"
+                android:text="Line Welson"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_heading_ultra_18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/mod1_vol"
+                app:layout_constraintTop_toTopOf="parent"
+
+                ></androidx.appcompat.widget.AppCompatTextView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/indicator1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.465"
+            app:layout_constraintStart_toStartOf="@+id/tab_vol"
+            android:background="@drawable/custom_tab_indicator"
+            app:layout_constraintWidth_percent="0.33"
+            app:layout_constraintHeight_percent="0.02"
+
+            ></View>
+
+
+        <View
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/indicator2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.465"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/custom_tab_indicator"
+            app:layout_constraintWidth_percent="0.33"
+            app:layout_constraintHeight_percent="0.02"
+
+            ></View>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/indicator3"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.465"
+            app:layout_constraintEnd_toEndOf="@+id/tab_vol"
+            android:background="@drawable/custom_tab_indicator"
+            app:layout_constraintWidth_percent="0.33"
+            app:layout_constraintHeight_percent="0.02"
+
+            ></View>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tab_vol"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/custom_tab_vol_bg"
+            app:layout_constraintBottom_toTopOf="@+id/caotainer_vol"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.085"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mod_vol_layout"
+            app:layout_constraintWidth_percent="0.9">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/announcement_tab"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/custom_start_corner_bg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:layout_constraintWidth_percent="0.33">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/sl5321"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:src="@drawable/ic_launcher_background"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/sl45621"
+
+                    app:layout_constraintHeight_percent="0.4"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.25"
+
+                    app:layout_constraintWidth_percent="0.25"></androidx.appcompat.widget.AppCompatImageView>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/sl45621"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/avenir_heavy"
+                    android:text="11"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_heading_ultra_18sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/sl5321"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/sl5321"
+                    app:layout_constraintTop_toTopOf="@+id/sl5321"
+
+                    ></androidx.appcompat.widget.AppCompatTextView>
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/announcement"
+                    app:layout_constraintEnd_toEndOf="@+id/sl45621"
+                    app:layout_constraintStart_toStartOf="@+id/sl5321"
+                    app:layout_constraintTop_toBottomOf="@+id/sl5321"
+
+
+
+                    android:textSize="@dimen/text_normal_12sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/avenir_heavy"
+
+                    ></androidx.appcompat.widget.AppCompatTextView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:id="@+id/chat_tab"
+                android:layout_height="match_parent"
+                app:layout_constraintWidth_percent="0.33"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/sl53215"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:src="@drawable/ic_launcher_background"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/sl456215"
+
+                    app:layout_constraintHeight_percent="0.4"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.25"
+
+                    app:layout_constraintWidth_percent="0.25"></androidx.appcompat.widget.AppCompatImageView>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/sl456215"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/avenir_heavy"
+                    android:text="27"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_heading_ultra_18sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/sl53215"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/sl53215"
+                    app:layout_constraintTop_toTopOf="@+id/sl53215"
+
+                    ></androidx.appcompat.widget.AppCompatTextView>
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/chats"
+                    app:layout_constraintEnd_toEndOf="@+id/sl456215"
+                    app:layout_constraintStart_toStartOf="@+id/sl53215"
+                    app:layout_constraintTop_toBottomOf="@+id/sl53215"
+
+
+
+                    android:textSize="@dimen/text_normal_12sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/avenir_heavy"
+
+                    ></androidx.appcompat.widget.AppCompatTextView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:id="@+id/case_tab"
+                android:layout_height="match_parent"
+                app:layout_constraintWidth_percent="0.33"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/custom_end_corner_bg"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/sl53210"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:src="@drawable/ic_launcher_background"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/sl456210"
+
+                    app:layout_constraintHeight_percent="0.4"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.25"
+
+                    app:layout_constraintWidth_percent="0.25"></androidx.appcompat.widget.AppCompatImageView>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/sl456210"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/avenir_heavy"
+                    android:text="85"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_heading_ultra_18sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/sl53210"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/sl53210"
+                    app:layout_constraintTop_toTopOf="@+id/sl53210"
+
+                    ></androidx.appcompat.widget.AppCompatTextView>
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cases"
+                    app:layout_constraintEnd_toEndOf="@+id/sl456210"
+                    app:layout_constraintStart_toStartOf="@+id/sl53210"
+                    app:layout_constraintTop_toBottomOf="@+id/sl53210"
+
+
+
+                    android:textSize="@dimen/text_normal_12sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/avenir_heavy"
+
+                    ></androidx.appcompat.widget.AppCompatTextView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/caotainer_vol"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.5"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/custom_bg_vol_container"
+
+            app:layout_constraintTop_toBottomOf="@+id/tab_vol"
+            app:layout_constraintWidth_percent="0.9"></androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/rcv_anouncement_vol"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.5"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/custom_bg_vol_container"
+
+            app:layout_constraintTop_toBottomOf="@+id/tab_vol"
+            app:layout_constraintWidth_percent="0.9"
+
+            ></androidx.recyclerview.widget.RecyclerView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

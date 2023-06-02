@@ -94,4 +94,12 @@
     <string name="please_enter_valid_otp">please enter valid OTP</string>
     <string name="please_enter_otp">please enter OTP</string>
     <string name="wrong_otp_please_try_agin">wrong OTP, Please try again.</string>
+    <string name="submit_otp">submit OTP</string>
+    <string name="dashboard">dashboard</string>
+    <string name="announcement">anoucement(s)</string>
+    <string name="chats">chat(s)</string>
+    <string name="cases">case(s)</string>
+    <string name="incoming_chats">incoming chat(s)</string>
+    <string name="past_chats">past chat(s)</string>
+    <string name="case_reports">case report(s)</string>
 </resources>

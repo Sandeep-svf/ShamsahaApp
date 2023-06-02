@@ -97,10 +97,7 @@ public class ChatFragment extends Fragment {
 
         final LayoutInflater inflater = getActivity().getLayoutInflater();
         View alertLayout = inflater.inflate(R.layout.test_dialog_xml_otp, null);
-
         final AppCompatImageView close_dialog = alertLayout.findViewById(R.id.close_dialog);
-
-
         final AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
 
         alert.setView(alertLayout);
@@ -145,8 +142,8 @@ public class ChatFragment extends Fragment {
             public void onClick(View v) {
                 dialogs.dismiss();
                 try {
-                    send_verification_code("+973" + phoneVictimEdittext.getText().toString());
-                    // send_verification_code("+91" + phoneVictimEdittext.getText().toString());
+                    //send_verification_code("+973" + phoneVictimEdittext.getText().toString());
+                     send_verification_code("+91" + phoneVictimEdittext.getText().toString());
                 } catch (NullPointerException e) {
                     e.printStackTrace();
                     Toast.makeText(getActivity(), getResources().getString(R.string.something_went_wrong), Toast.LENGTH_SHORT).show();
@@ -251,6 +248,10 @@ public class ChatFragment extends Fragment {
                 public void onCodeSent(String verificationId, PhoneAuthProvider.ForceResendingToken token) {
                     // Code sent to the user's phone, save the verification ID and token to use later
                     phoneVerificationId = verificationId;
+                    // need to call otp layout for OTP verification.
+
+                    otp_verificaiton_popup(getActivity(),"123456789");
+
                 }
             };
 

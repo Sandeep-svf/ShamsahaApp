@@ -162,11 +162,10 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:textAllCaps="false"
-
         android:textSize="@dimen/text_heading_ultra_18sp"
         android:background="@drawable/custom_yellow_button_4do_radious"
         android:fontFamily="@font/avenir_heavy"
-        android:text="@string/request_otp"
+        android:text="@string/submit_otp"
         app:layout_constraintStart_toStartOf="@+id/otp_layout"
         app:layout_constraintEnd_toEndOf="@+id/otp_layout"
         app:layout_constraintTop_toBottomOf="@+id/otp_layout"
