@@ -20,7 +20,7 @@
             android:layout_height="0dp"
             app:layout_constraintBottom_toTopOf="@+id/profile_vol_layout"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHeight_percent="0.125"
+            app:layout_constraintHeight_percent="0.1"
 
 
             app:layout_constraintHorizontal_bias="0.5"
@@ -37,11 +37,11 @@
                 android:src="@drawable/logo"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHeight_percent="0.3"
+                app:layout_constraintHeight_percent="0.45"
 
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.25"
+                app:layout_constraintVertical_bias="0.05"
                 app:layout_constraintWidth_percent="0.4"></androidx.appcompat.widget.AppCompatImageView>
 
 
@@ -63,7 +63,6 @@
                 app:layout_constraintHeight_percent="0.3"
 
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.85"
                 app:layout_constraintWidth_percent="0.4"></androidx.appcompat.widget.AppCompatTextView>
 
@@ -202,7 +201,7 @@
             android:background="@drawable/cutom_blue_bg_vol_dashboard"
             app:layout_constraintBottom_toTopOf="@+id/tab_vol"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHeight_percent="0.065"
+            app:layout_constraintHeight_percent="0.06"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
 
@@ -248,7 +247,7 @@
             android:id="@+id/indicator1"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.465"
+            app:layout_constraintVertical_bias="0.453"
             app:layout_constraintStart_toStartOf="@+id/tab_vol"
             android:background="@drawable/custom_tab_indicator"
             app:layout_constraintWidth_percent="0.33"
@@ -264,7 +263,7 @@
             android:id="@+id/indicator2"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.465"
+            app:layout_constraintVertical_bias="0.453"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:background="@drawable/custom_tab_indicator"
@@ -280,7 +279,7 @@
             android:visibility="gone"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.465"
+            app:layout_constraintVertical_bias="0.453"
             app:layout_constraintEnd_toEndOf="@+id/tab_vol"
             android:background="@drawable/custom_tab_indicator"
             app:layout_constraintWidth_percent="0.33"
@@ -294,9 +293,9 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@drawable/custom_tab_vol_bg"
-            app:layout_constraintBottom_toTopOf="@+id/caotainer_vol"
+            app:layout_constraintBottom_toTopOf="@+id/caotainer_vol56"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHeight_percent="0.085"
+            app:layout_constraintHeight_percent="0.075"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/mod_vol_layout"
@@ -498,9 +497,10 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/caotainer_vol"
+            android:id="@+id/caotainer_vol56"
             android:layout_width="0dp"
             android:layout_height="0dp"
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHeight_percent="0.5"
@@ -509,24 +509,31 @@
             android:background="@drawable/custom_bg_vol_container"
 
             app:layout_constraintTop_toBottomOf="@+id/tab_vol"
-            app:layout_constraintWidth_percent="0.9"></androidx.constraintlayout.widget.ConstraintLayout>
+            app:layout_constraintWidth_percent="0.9">
 
-        <androidx.recyclerview.widget.RecyclerView
 
-            android:id="@+id/rcv_anouncement_vol"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHeight_percent="0.5"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            android:background="@drawable/custom_bg_vol_container"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/caotainer_vol2"
+                android:visibility="gone"
+                android:background="@drawable/custom_bg_vol_container"
 
-            app:layout_constraintTop_toBottomOf="@+id/tab_vol"
-            app:layout_constraintWidth_percent="0.9"
+                ></androidx.constraintlayout.widget.ConstraintLayout>
 
-            ></androidx.recyclerview.widget.RecyclerView>
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:visibility="gone"
+                android:id="@+id/rcv_anouncement_vol"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/custom_bg_vol_container"
+                ></androidx.recyclerview.widget.RecyclerView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

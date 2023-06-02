@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="120dp">
+    android:layout_height="100dp">
 
 
     <androidx.cardview.widget.CardView
@@ -34,6 +34,7 @@
                 app:layout_constraintWidth_percent="0.95"
                 android:layout_height="wrap_content"
                 android:text="@string/raw_data"
+                android:textSize="@dimen/text_normal_12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:maxLines="3"
@@ -48,6 +49,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="posted by: admin"
+                android:textSize="@dimen/text_normal_12sp"
                 android:fontFamily="@font/avenir_heavy"
                 app:layout_constraintVertical_bias="0.9"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -61,6 +63,7 @@
                 android:layout_height="wrap_content"
                 android:text="2023-04-10 04:55:05"
                 app:layout_constraintVertical_bias="0.9"
+                android:textSize="@dimen/text_normal_12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
 
                 android:fontFamily="@font/avenir_heavy"

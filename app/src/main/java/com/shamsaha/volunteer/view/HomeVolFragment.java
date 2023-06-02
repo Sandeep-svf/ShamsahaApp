@@ -40,8 +40,9 @@ public class HomeVolFragment extends Fragment {
                 binding.chatTab.setBackgroundResource(R.color.black_them);
                 binding.caseTab.setBackgroundResource(R.drawable.custom_end_corner_bg);
 
-                binding.caotainerVol.setVisibility(View.GONE);
+              
                 binding.rcvAnouncementVol.setVisibility(View.VISIBLE);
+                binding.caotainerVol2.setVisibility(View.GONE);
 
 
                 LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
@@ -65,10 +66,10 @@ public class HomeVolFragment extends Fragment {
 
                 ChatVolFragment chatVolFragment = new ChatVolFragment();
                 FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
-                transaction.replace(R.id.caotainer_vol, chatVolFragment);
+                transaction.replace(R.id.caotainer_vol2, chatVolFragment);
                 transaction.commit();
 
-                binding.caotainerVol.setVisibility(View.VISIBLE);
+                binding.caotainerVol2.setVisibility(View.VISIBLE);
                 binding.rcvAnouncementVol.setVisibility(View.GONE);
             }
         });
@@ -85,10 +86,10 @@ public class HomeVolFragment extends Fragment {
 
                 CaseVolFragment caseVolFragment = new CaseVolFragment();
                 FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
-                transaction.replace(R.id.caotainer_vol, caseVolFragment);
+                transaction.replace(R.id.caotainer_vol2, caseVolFragment);
                 transaction.commit();
 
-                binding.caotainerVol.setVisibility(View.VISIBLE);
+                binding.caotainerVol2.setVisibility(View.VISIBLE);
                 binding.rcvAnouncementVol.setVisibility(View.GONE);
             }
         });
@@ -101,7 +102,7 @@ public class HomeVolFragment extends Fragment {
         binding.chatTab.setBackgroundResource(R.color.black_them);
         binding.caseTab.setBackgroundResource(R.drawable.custom_end_corner_bg);
 
-        binding.caotainerVol.setVisibility(View.GONE);
+        binding.caotainerVol2.setVisibility(View.GONE);
         binding.rcvAnouncementVol.setVisibility(View.VISIBLE);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
