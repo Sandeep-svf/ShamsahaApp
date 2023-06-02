@@ -500,14 +500,12 @@
             android:id="@+id/caotainer_vol56"
             android:layout_width="0dp"
             android:layout_height="0dp"
-
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHeight_percent="0.5"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             android:background="@drawable/custom_bg_vol_container"
-
             app:layout_constraintTop_toBottomOf="@+id/tab_vol"
             app:layout_constraintWidth_percent="0.9">
 

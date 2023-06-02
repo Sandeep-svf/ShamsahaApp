@@ -27,6 +27,7 @@ public class LockAppFragment extends Fragment {
 
 
 
+
         return binding.getRoot();
     }
 }

