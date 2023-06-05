@@ -145,6 +145,7 @@
                         app:layout_constraintTop_toTopOf="parent"></View>
 
                     <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/email_edit_text"
                         android:layout_width="0dp"
                         android:layout_height="25dp"
                         android:background="@null"
@@ -217,6 +218,7 @@
                         app:layout_constraintTop_toTopOf="parent"></View>
 
                     <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/pin_edit_text"
                         android:layout_width="0dp"
                         android:layout_height="25dp"
                         android:fontFamily="@font/avenir_heavy"
@@ -278,6 +280,7 @@
                         android:layout_width="0dp"
                         android:layout_height="25dp"
                         android:layout_marginStart="10dp"
+                        android:id="@+id/pin_re_enter_edit_text"
                         android:background="@null"
                         android:fontFamily="@font/avenir_heavy"
                         android:hint="@string/reenter_pin"

@@ -102,4 +102,6 @@
     <string name="incoming_chats">incoming chat(s)</string>
     <string name="past_chats">past chat(s)</string>
     <string name="case_reports">case report(s)</string>
+    <string name="please_enter_pin">Pleae enter pin</string>
+    <string name="please_re_enter_email">Please re-enter pin</string>
 </resources>
