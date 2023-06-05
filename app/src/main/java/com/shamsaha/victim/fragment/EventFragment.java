@@ -2,14 +2,17 @@ package com.shamsaha.victim.fragment;
 
 import android.os.Bundle;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 
 import com.shamsaha.R;
 import com.shamsaha.databinding.FragmentEventBinding;
@@ -28,15 +31,24 @@ public class EventFragment extends Fragment {
         // Inflate the layout for this fragment
         binding= FragmentEventBinding.inflate(inflater, container, false);
 
-        EventMediaFragment.ViewPagerAdapter adapter = new EventMediaFragment.ViewPagerAdapter(getChildFragmentManager());
-        setupViewPager(binding.viewPager,adapter);
-        binding.toolbar.setupWithViewPager(binding.viewPager);
-        setupTabtitle();
+//        EventMediaFragment.ViewPagerAdapter adapter = new EventMediaFragment.ViewPagerAdapter(getChildFragmentManager());
+//        setupViewPager(binding.viewPager,adapter);
+//        binding.toolbar.setupWithViewPager(binding.viewPager);
+//        setupTabtitle();
 
+        // Create an instance of the child fragment
+        EventFragment eventFragment = new EventFragment();
+
+        // Replace the container with the child fragment
+        getChildFragmentManager().beginTransaction()
+                .replace(binding.container.getId(), eventFragment)
+                .commit();
 
         return binding.getRoot();
     }
-    private void setupTabtitle() {
+
+
+/*    private void setupTabtitle() {
 
         binding.toolbar.getTabAt(0).setText(getResources().getString(R.string.volunteer));
         binding.toolbar.getTabAt(1).setText(getResources().getString(R.string.publicstring));
@@ -73,5 +85,5 @@ public class EventFragment extends Fragment {
         }
 
 
-    }
+    }*/
 }

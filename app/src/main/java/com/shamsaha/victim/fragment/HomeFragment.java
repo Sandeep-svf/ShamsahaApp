@@ -19,6 +19,8 @@ import com.shamsaha.databinding.FragmentHomeBinding;
 import com.shamsaha.retrofit.API_Client;
 import com.shamsaha.victim.model.HomeModel;
 import com.shamsaha.victim.model.res.HomeRes;
+import com.shamsaha.volunteer.VolunteerLoginFragment;
+import com.shamsaha.volunteer.view.DashboardVolunteerActivity;
 
 import org.json.JSONObject;
 
@@ -42,6 +44,15 @@ public class HomeFragment extends Fragment {
         home_api(view);
 
 
+        binding.learnMoreButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // volunteer home temp
+                Intent intent = new Intent(getActivity(),DashboardVolunteerActivity.class);
+                startActivity(intent);
+
+            }
+        });
 
 
         return view;
